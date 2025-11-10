@@ -168,8 +168,8 @@ footer {
 }
 
 .tasks-section {
-    padding-bottom: 6em;
     padding: 0 2rem;
+    padding-bottom: 6em;
 }
 
 .about-section {
@@ -223,4 +223,5 @@ footer {
     color: rgba(17, 125, 120, 1);
     margin-bottom: 1rem;
 }
+
 
