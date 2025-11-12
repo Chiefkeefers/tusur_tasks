@@ -9,7 +9,8 @@ h1 {
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -29,7 +30,7 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .nav-links {
@@ -224,4 +225,44 @@ footer {
     margin-bottom: 1rem;
 }
 
-
+/* events */
+.event {
+    padding: 40px 0 150px;
+  }
+  
+  .reserve {
+    display: grid;
+    gap: 65px 11%;
+    grid-template-columns: 405px calc(89% - 405px);
+    grid-template-areas: 
+      "checks scheme"
+      "order legend"; 
+    width: 100%;
+  }
+  
+  .reserve__checks {
+    grid-area: checks;
+  }
+  
+  .reserve__order {
+    grid-area: order;
+  }
+  
+  .reserve__scheme {
+    grid-area: scheme;
+  }
+  
+  .reserve__scheme {
+    grid-area: scheme;
+  }
+  
+  .reserve > div {
+    box-sizing: border-box;
+    padding: 10px;
+    margin-inline: 1em;
+    border-radius: 1em;
+    color: white;
+    font-size: large;
+    background: linear-gradient(90deg, rgba(17, 125, 120, 1) 0%, rgba(173, 224, 177, 1) 100%);;
+    text-align: center;
+  }
