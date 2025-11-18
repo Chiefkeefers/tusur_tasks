@@ -23,22 +23,48 @@
   </header>
 
   <main class="main">
-    <article class="event">
-      <form class="reserve event__reserve">
-        <div class="reserve__checks">
-          Чекбоксы
-        </div>
-        <div class="reserve__scheme">
-          Схема столов
-        </div>
-        <div class="reserve__order">
-          Оформление заказа
-        </div>
-        <div class="reserve__legend">
-          Легенда
-        </div>
-      </form>
+    <article class="event-card  @@class">
+      <a href="#" class="event-card__link">
+        <picture class="event-card__picture">
+          <img src="@@img" alt="@@alt" class="event-card__img" />
+        </picture>
+        <h4 class="event-card__title">@@title</h4>
+        <p class="event-card__description">@@descr</p>
+        <time datetime="@@datetime" class="event-card__time">@@time</time>
+      </a>
     </article>
+    <div class="home">
+      <section class="listing home__listing">
+        <h2 class="listing__title section-title">Блог</h2>
+
+        <div class="listing__article-list">
+          <!-- prettier-ignore -->
+          <article class="article-card listing__article-card">
+            <a href="#" class="article-card__link">
+              <picture class="article-card__picture">
+                <img src="assets/images/blog/theatre.jpg" alt="Theatre Photosession" class="article-card__img" />
+              </picture>
+            </a>
+
+            <div class="article-card__info">
+              <time datetime="2021-11-26T00:00" class="article-card__time">26.11.2021</time>
+              <a href="#" class="article-card__title-link">
+                <h4 class="article-card__title">Фотосессия в стенах Театра драмы</h4>
+                <div class="article-card__arrow arrow">
+                  <svg class="arrow__icon" width="92" height="62">
+                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                  </svg>
+                </div>
+              </a>
+
+              <p class="article-card__description">Организовывая фотосессию для...</p>
+            </div>
+          </article>
+        </div>
+
+        <a href="#" class="listing__link link">Смотреть все</a>
+      </section>
+    </div>
   </main>
 
   <footer class="footer" id="contacts">

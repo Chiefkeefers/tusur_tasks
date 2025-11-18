@@ -1,0 +1,43 @@
+.listing {
+  padding: 40px 0;
+
+  &__title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #333;
+    text-align: center;
+  }
+
+  &__article-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #0056b3;
+      text-decoration: underline;
+    }
+
+    &::after {
+      content: "→";
+      margin-left: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover::after {
+      transform: translateX(4px);
+    }
+  }
+}

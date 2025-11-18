@@ -5,22 +5,10 @@
 @@include('blocks/page-header.html')
 
     <main class="main">
-        <article class="event">
-            <form class="reserve event__reserve">
-                <div class="reserve__checks">
-                    Чекбоксы
-                </div>
-                <div class="reserve__scheme">
-                    Схема столов
-                </div>
-                <div class="reserve__order">
-                    Оформление заказа
-                </div>
-                <div class="reserve__legend">
-                    Легенда
-                </div>
-            </form>
-        </article>
+        @@include('blocks/event-card.html')
+        <div class="home">
+            @@include('blocks/blog-listing.html', {"class": "home__listing"})
+        </div>
     </main>
 
 @@include('blocks/page-footer.html')
