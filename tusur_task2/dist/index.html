@@ -10,35 +10,50 @@
 </head>
 
 <body class="body">
-  <header class="header">
-    <nav class="navbar">
-      <div class="nav-logo">МойСайт</div>
-      <div class="nav-links">
-        <a href="#home">Главная</a>
-        <a href="#about">О нас</a>
-        <a href="#services">Услуги</a>
-        <a href="#contacts">Контакты</a>
+  <header class="page-header">
+    <nav class="page-header__navbar">
+      <div class="page-header__logo">МойСайт</div>
+      <div class="page-header__nav-links">
+        <a href="#home" class="page-header__nav-link">Главная</a>
+        <a href="#about" class="page-header__nav-link">О нас</a>
+        <a href="#services" class="page-header__nav-link">Услуги</a>
+        <a href="#contacts" class="page-header__nav-link">Контакты</a>
       </div>
     </nav>
   </header>
 
   <main class="main">
-    <article class="event-card  @@class">
-      <a href="#" class="event-card__link">
-        <picture class="event-card__picture">
-          <img src="@@img" alt="@@alt" class="event-card__img" />
-        </picture>
-        <h4 class="event-card__title">@@title</h4>
-        <p class="event-card__description">@@descr</p>
-        <time datetime="@@datetime" class="event-card__time">@@time</time>
-      </a>
-    </article>
+    <section class="listing events__listing @@class">
+      <h2 class="listing__title section-title">Мероприятия</h2>
+
+      <div class="listing__events-list">
+        <article class="event-card listing__event-card">
+          <a href="#" class="event-card__link">
+            <picture class="event-card__picture">
+              <img src="assets/images/events/nirvana.jpg" alt="nirvana" class="event-card__img" />
+            </picture>
+            <h4 class="event-card__title">Собираемся и слушаем альбом Nirvana</h4>
+            <p class="event-card__description">Это третий альбом группы...</p>
+            <time datetime="2025-12-07T18:00" class="event-card__time">07.12.2025 | начало 18.00</time>
+          </a>
+        </article>
+        <article class="event-card listing__event-card">
+          <a href="#" class="event-card__link">
+            <picture class="event-card__picture">
+              <img src="assets/images/events/stuff.jpg" alt="stuff" class="event-card__img" />
+            </picture>
+            <h4 class="event-card__title">Есть тема, нужно обсудить с HowStuffWorks</h4>
+            <p class="event-card__description">Один из самых популярных подкастов в мире...</p>
+            <time datetime="2025-12-14T18:30" class="event-card__time">14.12.2025 | начало 18.30</time>
+          </a>
+        </article>
+      </div>
+    </section>
     <div class="home">
       <section class="listing home__listing">
         <h2 class="listing__title section-title">Блог</h2>
 
         <div class="listing__article-list">
-          <!-- prettier-ignore -->
           <article class="article-card listing__article-card">
             <a href="#" class="article-card__link">
               <picture class="article-card__picture">
@@ -47,7 +62,7 @@
             </a>
 
             <div class="article-card__info">
-              <time datetime="2021-11-26T00:00" class="article-card__time">26.11.2021</time>
+              <time datetime="2025-11-26T00:00" class="article-card__time">26.11.2025</time>
               <a href="#" class="article-card__title-link">
                 <h4 class="article-card__title">Фотосессия в стенах Театра драмы</h4>
                 <div class="article-card__arrow arrow">
@@ -57,23 +72,63 @@
                 </div>
               </a>
 
-              <p class="article-card__description">Организовывая фотосессию для...</p>
+              <p class="article-card__description">Организовывая фотосессию для европейского журнала о моде, мы обратились в театр...</p>
+            </div>
+          </article>
+          <article class="article-card listing__article-card">
+            <a href="#" class="article-card__link">
+              <picture class="article-card__picture">
+                <img src="assets/images/blog/vr.jpg" alt="Concert Event" class="article-card__img" />
+              </picture>
+            </a>
+
+            <div class="article-card__info">
+              <time datetime="2025-11-05T00:00" class="article-card__time">05.11.2025</time>
+              <a href="#" class="article-card__title-link">
+                <h4 class="article-card__title">Выставка VR в Томске</h4>
+                <div class="article-card__arrow arrow">
+                  <svg class="arrow__icon" width="92" height="62">
+                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                  </svg>
+                </div>
+              </a>
+
+              <p class="article-card__description">Клуб виртуальной реальности - это новое культурное пространство...</p>
+            </div>
+          </article>
+          <article class="article-card listing__article-card">
+            <a href="#" class="article-card__link">
+              <picture class="article-card__picture">
+                <img src="assets/images/blog/rock.jpg" alt="Rock Concert" class="article-card__img" />
+              </picture>
+            </a>
+
+            <div class="article-card__info">
+              <time datetime="2025-11-01T00:00" class="article-card__time">01.11.2025</time>
+              <a href="#" class="article-card__title-link">
+                <h4 class="article-card__title">Rocking radio в заброшенном ангаре</h4>
+                <div class="article-card__arrow arrow">
+                  <svg class="arrow__icon" width="92" height="62">
+                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                  </svg>
+                </div>
+              </a>
+
+              <p class="article-card__description">Все началось с идеи создать необычное место для выступления диджеев...</p>
             </div>
           </article>
         </div>
-
-        <a href="#" class="listing__link link">Смотреть все</a>
       </section>
     </div>
   </main>
 
-  <footer class="footer" id="contacts">
-    <div class="footer-content">
-      <div class="footer_social-links">
-        <a href="https://t.me/Ch1efTem" aria-label="Telegram">Telegram</a>
-        <a href="https://vk.com/silentrewave" aria-label="VK">VK</a>
-        <a href="https://github.com/Chiefkeefers" aria-label="GitHub">GitHub</a>
-        <a href="mailto:artemshefer3@gmail.com" aria-label="Email">Email</a>
+  <footer class="page-footer">
+    <div class="page-footer__content">
+      <div class="page-footer__social-links">
+        <a class="page-footer__social-link" href="https://t.me/Ch1efTem" aria-label="Telegram">Telegram</a>
+        <a class="page-footer__social-link" href="https://vk.com/silentrewave" aria-label="VK">VK</a>
+        <a class="page-footer__social-link" href="https://github.com/Chiefkeefers" aria-label="GitHub">GitHub</a>
+        <a class="page-footer__social-link" href="mailto:artemshefer3@gmail.com" aria-label="Email">Email</a>
       </div>
     </div>
   </footer>

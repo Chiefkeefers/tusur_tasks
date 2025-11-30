@@ -3,8 +3,8 @@
     display: block;
     text-decoration: none;
     color: inherit;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-
+    transition: transform 0.3s ease;
+    
     &:hover {
       transform: translateY(-5px);
     }
@@ -13,33 +13,36 @@
   &__picture {
     display: block;
     overflow: hidden;
-    border-radius: 8px;
-    margin-bottom: 16px;
+    border-radius: 1em; // Больше скругление
+    margin-bottom: 1.2em; // Больше отступ
+    height: 25em; // Выше чем у блога (было 200px)
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); // Тень для акцента
   }
 
   &__img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
 
     .event-card__link:hover & {
-      transform: scale(1.05);
+      transform: scale(1.08); // Более заметный ховер
     }
   }
 
   &__title {
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 20px; // Крупнее чем у блога (было 18px)
+    font-weight: 700; // Жирнее
     line-height: 1.3;
-    margin: 0 0 8px 0;
+    margin: 0 0 12px 0;
     color: #333;
   }
 
   &__description {
-    font-size: 14px;
-    line-height: 1.4;
-    margin: 0 0 12px 0;
+    font-size: 15px; // Крупнее чем у блога
+    line-height: 1.5;
+    margin: 0 0 16px 0;
     color: #666;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -48,8 +51,9 @@
   }
 
   &__time {
-    font-size: 12px;
-    color: #999;
+    font-size: 14px; // Крупнее
+    font-weight: 600; // Жирнее
+    color: #ff0000; // Акцентный цвет
     display: block;
   }
 }

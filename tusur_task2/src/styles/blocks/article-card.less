@@ -1,58 +1,85 @@
 .article-card {
-  &__info {
-    box-sizing: border-box;
-    position: relative;
-    display: flex;
-    flex-direction: column;
+  margin-bottom: 2em;
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__picture {
+    display: block;
+    overflow: hidden;
+    border-radius: 0.8em;
+    margin-bottom: 1em;
+    height: 15em;
+  }
+
+  &__img {
     width: 100%;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding: 30px 0;
-    padding-right: 150px;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+
+    .article-card__link:hover & {
+      transform: scale(1.05);
+    }
+  }
+
+  &__info {
+    padding: 0 8px;
   }
 
   &__time {
-    margin: 0 0 40px;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 22px;
-  }
-
-  &__title-link,
-  &__description {
-    max-width: 470px;
+    font-size: 12px;
+    color: #999;
+    display: block;
+    margin-bottom: 2em;
   }
 
   &__title-link {
-    margin: auto 0 40px;
-    color: @black;
-    text-decoration-color: transparent;
-    transition: color 0.2s, text-decoration-color 0.2s;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 12px;
+
     &:hover {
-      color: @red;
-      text-decoration-color: @red;
+      .article-card__title {
+        color: #ff0000;
+      }
+
+      .arrow__icon {
+        transform: translateX(4px);
+      }
     }
   }
 
   &__title {
-    margin: 0;
-    color: inherit;
+    font-size: 18px;
     font-weight: 600;
-    font-size: 24px;
-    line-height: 33px;
-  }
-
-  &__description {
+    line-height: 1.3;
     margin: 0;
-    font-size: 16px;
-    line-height: 22px;
+    color: #333;
+    flex: 1;
+    transition: color 0.3s ease;
   }
 
   &__arrow {
-    position: absolute;
-    right: 0;
-    bottom: 30px;
-    color: inherit;
-    transition: none;
+    flex-shrink: 0;
+    margin-left: 12px;
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0;
+    color: #666;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 }
