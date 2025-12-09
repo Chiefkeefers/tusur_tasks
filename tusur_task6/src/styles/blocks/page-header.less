@@ -1,0 +1,38 @@
+.page-header {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+
+  &__navbar {
+    width: 70em;
+    border-radius: 1em;
+    background: linear-gradient(90deg, rgba(17, 125, 120, 1) 0%, rgba(173, 224, 177, 1) 100%);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  &__logo {
+    color: @white;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  &__nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__nav-link {
+    color: @white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

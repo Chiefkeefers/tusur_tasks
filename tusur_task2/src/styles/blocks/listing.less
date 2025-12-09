@@ -1,43 +1,107 @@
 .listing {
-  padding: 40px 0;
-
+  padding: 3rem 0;
+  max-width: 800px; /* Уже чем у мероприятий */
+  margin: 0 auto;
+  
   &__title {
-    font-size: 28px;
+    font-size: 2rem;
     font-weight: 700;
-    margin-bottom: 24px;
-    color: #333;
-    text-align: center;
+    text-align: left;
+    margin-bottom: 2rem;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0 1rem;
   }
 
   &__article-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 24px;
-    margin-bottom: 32px;
+    margin-bottom: 2.5rem;
+    padding: 0 1rem;
+  }
+
+  &__view-all {
+    text-align: center;
+    padding: 0 1rem;
+    
+    &-link {
+      display: inline-block;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #000;
+      text-decoration: none;
+      padding: 0.6rem 1.5rem;
+      border: 2px solid #000;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        background-color: #000;
+        color: #fff;
+      }
+    }
+  }
+}
+
+/* Стили для карточки статьи блога */
+.article-card {
+  margin-bottom: 2rem;
+  
+  &:last-child {
+    margin-bottom: 0;
   }
 
   &__link {
-    display: inline-flex;
-    align-items: center;
-    font-size: 16px;
-    font-weight: 500;
-    color: #007bff;
+    display: block;
     text-decoration: none;
-    transition: color 0.3s ease;
+    color: inherit;
+  }
 
-    &:hover {
-      color: #0056b3;
-      text-decoration: underline;
-    }
+  &__picture {
+    width: 100%;
+    height: 250px; /* Выше изображение для блога */
+    overflow: hidden;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
 
-    &::after {
-      content: "→";
-      margin-left: 8px;
-      transition: transform 0.3s ease;
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+    
+    .article-card__link:hover & {
+      transform: scale(1.03);
     }
+  }
 
-    &:hover::after {
-      transform: translateX(4px);
-    }
+  &__time {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #000;
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  &__title {
+    font-size: 1.25rem; /* Крупнее заголовок */
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0 0 0.75rem 0;
+    color: #000;
+  }
+
+  &__description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 0 1.25rem 0;
+    color: #666;
+  }
+
+  &__separator {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 1.5rem 0;
+    width: 100%;
   }
 }

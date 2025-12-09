@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ru" class="show-event-popup">
+@@include('blocks/head.html')
+<body class="body">
+@@include('blocks/page-header.html')
+
+    <main class="main">
+        @@include('blocks/event-card.html')
+        <div class="home">
+            @@include('blocks/blog-listing.html', {"class": "home__listing"})
+            @@include('blocks/event-pp.html')
+        </div>
+    </main>
+
+@@include('blocks/page-footer.html')
+</body>
+
+</html>
