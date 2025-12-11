@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+<html lang="ru" class="show-event-popup">
 
 <head>
   <meta charset="UTF-8">
@@ -49,7 +50,7 @@
               <img src="assets/images/events/nirvana.jpg" alt="nirvana" class="event-card__img" />
             </picture>
             <h4 class="event-card__title">Собираемся и слушаем альбом Nirvana</h4>
-            <p class="event-card__description">Это третий альбом группы...</p>
+            <p class="event-card__description">Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.</p>
             <time datetime="2025-12-07T18:00" class="event-card__time">07.12.2025 | начало 18.00</time>
           </a>
         </article>
@@ -59,7 +60,7 @@
               <img src="assets/images/events/stuff.jpg" alt="stuff" class="event-card__img" />
             </picture>
             <h4 class="event-card__title">Есть тема, нужно обсудить с HowStuffWorks</h4>
-            <p class="event-card__description">Один из самых популярных подкастов в мире...</p>
+            <p class="event-card__description">Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.</p>
             <time datetime="2025-12-14T18:30" class="event-card__time">14.12.2025 | начало 18.30</time>
           </a>
         </article>
@@ -75,73 +76,159 @@
         </article>
       </div>
     </section>
+
+    <table class="events__tariffs-table  table">
+      <thead class="table__head">
+        <tr class="table__head-tr">
+          <th class="table__th"></th>
+          <th class="table__th">Тариф «Light»</th>
+          <th class="table__th">Тариф «Promo»</th>
+          <th class="table__th">Тариф «All stars»</th>
+        </tr>
+      </thead>
+      <tbody class="table__body">
+        <tr class="table__tr">
+          <th class="table__body-th">Стоимость за час</th>
+          <td class="table__td">1 000 ₽</td>
+          <td class="table__td">3 000 ₽</td>
+          <td class="table__td">8 000 ₽</td>
+        </tr>
+        <tr class="table__tr">
+          <th class="table__body-th">Ведущий мероприятия</th>
+          <td class="table__td"></td>
+          <td class="table__td">
+            <span class="ok"></span>
+          </td>
+          <td class="table__td">
+            <span class="ok"></span>
+          </td>
+        </tr>
+        <tr class="table__tr">
+          <th class="table__body-th">Фотосъемка</th>
+          <td class="table__td">
+            <span class="ok"></span>
+          </td>
+          <td class="table__td">
+            <span class="ok"></span>
+          </td>
+          <td class="table__td">
+            <span class="ok"></span>
+          </td>
+        </tr>
+        <tr class="table__tr">
+          <th class="table__body-th">Видеосъемка</th>
+          <td class="table__td"></td>
+          <td class="table__td"></td>
+          <td class="table__td">
+            <span class="ok"></span>
+          </td>
+        </tr>
+        <tr class="table__tr">
+          <th class="table__body-th">Организация питания</th>
+          <td class="table__td"></td>
+          <td class="table__td">
+            <span class="ok"></span>
+          </td>
+          <td class="table__td">
+            <span class="ok"></span>
+          </td>
+        </tr>
+        <tr class="table__tr">
+          <th class="table__body-th">Декор</th>
+          <td class="table__td"></td>
+          <td class="table__td"></td>
+          <td class="table__td">
+            <span class="ok"></span>
+          </td>
+        </tr>
+        <tr class="table__tr">
+          <th class="table__body-th">Звуковое сопровождение</th>
+          <td class="table__td"></td>
+          <td class="table__td">
+            <span class="ok"></span>
+          </td>
+          <td class="table__td">
+            <span class="ok"></span>
+          </td>
+        </tr>
+        <tr class="table__tr">
+          <th class="table__body-th">Дополнительное освещение</th>
+          <td class="table__td"></td>
+          <td class="table__td"></td>
+          <td class="table__td">
+            <span class="ok"></span>
+          </td>
+        </tr>
+
+        <tr class="table__tr">
+          <th class="table__body-th">Клининг</th>
+          <td class="table__td"></td>
+          <td class="table__td"></td>
+          <td class="table__td">
+            <span class="ok"></span>
+          </td>
+        </tr>
+      </tbody>
+
+      <tfoot class="table__footer">
+        <tr class="table__footer-tr">
+          <th class="table__footer-th"></th>
+          <th class="table__footer-th">Тариф «Light»</th>
+          <th class="table__footer-th">Тариф «Promo»</th>
+          <th class="table__footer-th">Тариф «All stars»</th>
+        </tr>
+      </tfoot>
+    </table>
     <div class="home">
       <section class="listing blog-listing home__listing">
         <h2 class="listing__title section-title">БЛОГ</h2>
 
         <div class="listing__article-list">
+          <!-- article-card.html -->
           <article class="article-card listing__article-card">
-            <a href="#" class="article-card__link">
-              <picture class="article-card__picture">
-                <img src="assets/images/blog/theatre.jpg" alt="Theatre Photosession" class="article-card__img" />
-              </picture>
+            <a class="article-card__link" href="#">
+              <div class="article-card__picture">
+                <img class="article-card__img" src="assets/images/blog/theatre.jpg" alt="Theatre Photosession" />
+              </div>
+
+              <div class="article-card__content">
+                <time class="article-card__time" datetime="2024-11-26T00:00">26.11.2024</time>
+                <h3 class="article-card__title">Фотосессия в стенах Театра драмы</h3>
+                <p class="article-card__description">Организована фотосессия для поданного бренда. Одежда мы смогли восполнить все показания заказчика и у нас получилось отличная работа. Смотрите как это было</p>
+              </div>
             </a>
 
-            <div class="article-card__info">
-              <time datetime="2024-11-26T00:00" class="article-card__time">26.11.2024</time>
-              <a href="#" class="article-card__title-link">
-                <h4 class="article-card__title">Фотосессия в стенах Театра драмы</h4>
-                <div class="article-card__arrow arrow">
-                  <svg class="arrow__icon" width="92" height="62">
-                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
-                  </svg>
-                </div>
-              </a>
-
-              <p class="article-card__description">Организована фотосессия для поданного бренда. Одежда мы смогли восполнить все показания заказчика и у нас получилось отличная работа. Смотрите как это было</p>
-            </div>
-          </article>
+            <hr />
+          </article><!-- article-card.html -->
           <article class="article-card listing__article-card">
-            <a href="#" class="article-card__link">
-              <picture class="article-card__picture">
-                <img src="assets/images/blog/vr.jpg" alt="VR Exhibition" class="article-card__img" />
-              </picture>
+            <a class="article-card__link" href="#">
+              <div class="article-card__picture">
+                <img class="article-card__img" src="assets/images/blog/vr.jpg" alt="VR Exhibition" />
+              </div>
+
+              <div class="article-card__content">
+                <time class="article-card__time" datetime="2024-11-05T00:00">05.11.2024</time>
+                <h3 class="article-card__title">Выставка VR в Томске</h3>
+                <p class="article-card__description">Кофе виртуальной реальности - это другие миры, яркие эмоции, новый опыт… Мы представляем нашим клиентам лучший игровой VR-опыт в Томске.</p>
+              </div>
             </a>
 
-            <div class="article-card__info">
-              <time datetime="2024-11-05T00:00" class="article-card__time">05.11.2024</time>
-              <a href="#" class="article-card__title-link">
-                <h4 class="article-card__title">Выставка VR в Томске</h4>
-                <div class="article-card__arrow arrow">
-                  <svg class="arrow__icon" width="92" height="62">
-                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
-                  </svg>
-                </div>
-              </a>
-
-              <p class="article-card__description">Кофе виртуальной реальности - это другие миры, яркие эмоции, новый опыт… Мы представляем нашим клиентам лучший игровой VR-опыт в Томске.</p>
-            </div>
-          </article>
+            <hr />
+          </article><!-- article-card.html -->
           <article class="article-card listing__article-card">
-            <a href="#" class="article-card__link">
-              <picture class="article-card__picture">
-                <img src="assets/images/blog/rock.jpg" alt="Rock Concert" class="article-card__img" />
-              </picture>
+            <a class="article-card__link" href="#">
+              <div class="article-card__picture">
+                <img class="article-card__img" src="assets/images/blog/rock.jpg" alt="Rock Concert" />
+              </div>
+
+              <div class="article-card__content">
+                <time class="article-card__time" datetime="2024-11-01T00:00">01.11.2024</time>
+                <h3 class="article-card__title">Rocking radio в заброшенном ангаре</h3>
+                <p class="article-card__description">15 электрогенераторов, километры проводов и пару тонн света. Все это для того, чтобы организовать лучшую вечеринку года для ребят из Новосибирска.</p>
+              </div>
             </a>
 
-            <div class="article-card__info">
-              <time datetime="2024-11-01T00:00" class="article-card__time">01.11.2024</time>
-              <a href="#" class="article-card__title-link">
-                <h4 class="article-card__title">Rocking radio в заброшенном ангаре</h4>
-                <div class="article-card__arrow arrow">
-                  <svg class="arrow__icon" width="92" height="62">
-                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
-                  </svg>
-                </div>
-              </a>
-
-              <p class="article-card__description">15 электрогенераторов, километры проводов и пару тонн света. Все это для того, чтобы организовать лучшую вечеринку года для ребят из Новосибирска.</p>
-            </div>
+            <hr />
           </article>
         </div>
 
@@ -150,6 +237,210 @@
         </div>
       </section>
     </div>
+    <section class="event-detail">
+      <h1 class="event-detail__title">Вечер | The Best of Sade</h1>
+      <div class="event-photo">
+        <div class="event-photo__text left-block">
+          <svg class="event-photo__svg" style="transform: scale(-1,1);">
+            <use href="../../assets/icons/rectangle.svg"></use>
+          </svg>
+          <span class="event-photo__datetime">16/12/2024</span>
+          <br>
+          <span>Кафе птичка</span>
+          <svg class="event-photo__svg" style="transform: scale(-1,1);">
+            <use href="../../assets/icons/rectangle.svg"></use>
+          </svg>
+        </div>
+        <img src="assets/images/events/Sade.jpg">
+        <div class="event-photo__text">
+          <svg class="event-photo__svg">
+            <use href="../../assets/icons/rectangle.svg"></use>
+          </svg>
+          <span class="event-photo__datetime">20.00</span>
+          <span>начало</span>
+          <br>
+          <span>Ленина 10 2 этаж</span>
+          <svg class="event-photo__svg">
+            <use href="../../assets/icons/rectangle.svg"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="event-info">
+        <h2 class="event-info__title">Программа мероприятия:</h2>
+        <ul class="event-program">
+          <li class="event-program__item">
+            <span class="event-program__time">20:15</span>
+            <span class="event-program__text">Приветствие гостей</span>
+          </li>
+          <li class="event-program__item">
+            <span class="event-program__time">20:30</span>
+            <span class="event-program__text">Первая подача блюд | Салаты</span>
+          </li>
+          <li class="event-program__item">
+            <span class="event-program__time">20:40</span>
+            <span class="event-program__text">Живой вокал | Композиции 1-3</span>
+          </li>
+          <li class="event-program__item">
+            <span class="event-program__time">21:20</span>
+            <span class="event-program__text">Подача горячих блюд</span>
+          </li>
+          <li class="event-program__item">
+            <span class="event-program__time">21:30</span>
+            <span class="event-program__text">Живой вокал | Композиции 4-7</span>
+          </li>
+          <li class="event-program__item">
+            <span class="event-program__time">22:15</span>
+            <span class="event-program__text">Подача десерта</span>
+          </li>
+          <li class="event-program__item">
+            <span class="event-program__time">22:30</span>
+            <span class="event-program__text">Живой вокал | Композиции 8-9</span>
+          </li>
+          <li class="event-program__item">
+            <span class="event-program__time">23:00</span>
+            <span class="event-program__text">Завершение вечера</span>
+          </li>
+        </ul>
+
+        <div class="event-info__divider"></div>
+
+        <h3 class="event-info__subtitle">The Best Of Sade</h3>
+        <div class="event-description">
+          <p class="event-description__text">Первый альбом-компиляция Sade, выпущенный в 1994 году. Он содержит 9
+            треков, включая самые популярные хиты группы, раритеты и их любимые треки.</p>
+          <p class="event-description__text">Группа продемонстрировала необычайное долголетие и креативность своей
+            творческой карьеры. Она лидировала музыкальных чартах с 1994 по 1995 год, став четырежды платиновой в
+            США и продав более 2 миллионов копий в Европе.</p>
+        </div>
+
+        <ol class="event-tracks">
+          <li class="event-tracks__item">Your Love Is King</li>
+          <li class="event-tracks__item">Hang On To Your Love</li>
+          <li class="event-tracks__item">Smooth Operator</li>
+          <li class="event-tracks__item">Jezebel</li>
+          <li class="event-tracks__item">The Sweetest Taboo</li>
+          <li class="event-tracks__item">Is It A Crime</li>
+          <li class="event-tracks__item">Never As Good As The First Time</li>
+          <li class="event-tracks__item">Love Is Stronger Than Pride</li>
+          <li class="event-tracks__item">Paradise</li>
+        </ol>
+      </div>
+
+      <div class="booking-grid">
+        <div class="booking-grid__column booking-grid__column--left">
+          <div class="booking-tables">
+            <h3 class="booking-tables__title">Забронировать столик</h3>
+            <div class="booking-tables__list">
+              <label class="booking-tables__checkbox">
+                <input type="checkbox" class="booking-tables__input">
+                <span class="booking-tables__label">1 стол</span>
+              </label>
+              <label class="booking-tables__checkbox">
+                <input type="checkbox" class="booking-tables__input">
+                <span class="booking-tables__label">2 стол</span>
+              </label>
+              <label class="booking-tables__checkbox">
+                <input type="checkbox" class="booking-tables__input">
+                <span class="booking-tables__label">3 стол</span>
+              </label>
+              <label class="booking-tables__checkbox">
+                <input type="checkbox" class="booking-tables__input">
+                <span class="booking-tables__label">4 стол</span>
+              </label>
+              <label class="booking-tables__checkbox">
+                <input type="checkbox" class="booking-tables__input">
+                <span class="booking-tables__label">5 стол</span>
+              </label>
+              <label class="booking-tables__checkbox">
+                <input type="checkbox" class="booking-tables__input">
+                <span class="booking-tables__label">6 стол</span>
+              </label>
+              <label class="booking-tables__checkbox">
+                <input type="checkbox" class="booking-tables__input">
+                <span class="booking-tables__label">7 стол</span>
+              </label>
+              <label class="booking-tables__checkbox">
+                <input type="checkbox" class="booking-tables__input">
+                <span class="booking-tables__label">8 стол</span>
+              </label>
+              <label class="booking-tables__checkbox">
+                <input type="checkbox" class="booking-tables__input">
+                <span class="booking-tables__label">9 стол</span>
+              </label>
+              <label class="booking-tables__checkbox">
+                <input type="checkbox" class="booking-tables__input">
+                <span class="booking-tables__label">10 стол</span>
+              </label>
+              <label class="booking-tables__checkbox">
+                <input type="checkbox" class="booking-tables__input">
+                <span class="booking-tables__label">11 стол</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="booking-tickets">
+            <h3 class="booking-tickets__title">Ваши пригласительные билеты</h3>
+
+            <table class="booking-tickets__table">
+              <tr class="booking-tickets__row">
+                <td class="booking-tickets__cell">9 шт.</td>
+                <td class="booking-tickets__cell">1 400 ₽</td>
+                <td class="booking-tickets__cell booking-tickets__cell--total">12 600 ₽</td>
+              </tr>
+              <tr class="booking-tickets__row">
+                <td class="booking-tickets__cell">4 шт.</td>
+                <td class="booking-tickets__cell">1 250 ₽</td>
+                <td class="booking-tickets__cell booking-tickets__cell--total">5 000 ₽</td>
+              </tr>
+            </table>
+
+            <div class="booking-tickets__summary">
+              <span class="booking-tickets__summary-label">Сумма</span>
+              <strong class="booking-tickets__summary-value">17 600 ₽</strong>
+            </div>
+
+            <button class="booking-tickets__button">Купить билеты</button>
+          </div>
+        </div>
+
+        <div class="booking-grid__column booking-grid__column--right">
+          <div class="booking-map">
+            <div class="booking-map__scene-label">Сцена</div>
+            <div class="booking-map__container">
+              <svg class="booking-map__svg" width="780" height="399" viewBox="0 0 780 399">
+                <use href="../../assets/icons/map.svg"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="booking-info">
+            <div class="booking-info__prices">
+              <h4 class="booking-info__title">Стоимость пригласительного билета</h4>
+              <div class="booking-info__price-row">
+                <span class="booking-info__price">1 400 ₽</span>
+                <span class="booking-info__description">| 1 персона</span>
+              </div>
+              <div class="booking-info__price-row">
+                <span class="booking-info__price">1 250 ₽</span>
+                <span class="booking-info__description">| 1 персона</span>
+              </div>
+            </div>
+
+            <div class="booking-info__notes">
+              <h4 class="booking-info__title">Примечание</h4>
+              <div class="booking-info__note">
+                <div class="booking-info__dot booking-info__dot--available"></div>
+                <span class="booking-info__text">доступные места</span>
+              </div>
+              <div class="booking-info__note">
+                <div class="booking-info__dot booking-info__dot--booked"></div>
+                <span class="booking-info__text">забронировано</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="page-footer">
@@ -196,12 +487,139 @@
       </div>
       <div class="page-footer__info__author">
         <div class="page-footer__info__author__text">
-          Создание и продвижение
+          Создание и продвижение (но не в этот раз 😈)
         </div>
         <img class="page-footer__info__author__img" src="../../assets/images/blog/logo.png" />
       </div>
     </div>
   </footer>
+  <div class="pp" id="eventPP">
+    <div class="pp__wrapper">
+      <div class="pp__sticky-close">
+        <button class="pp__x-btn x-btn">
+          <svg class="x-btn__icon" width="30" height="30">
+            <use xlink:href="assets/icons/symbols.svg#x"></use>
+          </svg>
+        </button>
+      </div>
+
+      <div class="pp__container">
+        <h2 class="pp__title">Заполните форму
+          <br />и мы подберем площадку
+        </h2>
+
+        <form class="pp__form form">
+          <!-- Формат мероприятия -->
+          <div class="form__section">
+            <div class="form__label">Формат мероприятия:</div>
+            <div class="radio">
+              <label class="radio__item">
+                <input class="radio__input" type="radio" name="format" value="seminar" checked>
+                <span class="radio__mark"></span>
+                <span class="radio__label">Мастер-класс/семинар</span>
+              </label>
+              <label class="radio__item">
+                <input class="radio__input" type="radio" name="format" value="concert">
+                <span class="radio__mark"></span>
+                <span class="radio__label">Концерт/выступление</span>
+              </label>
+              <label class="radio__item">
+                <input class="radio__input" type="radio" name="format" value="exhibition">
+                <span class="radio__mark"></span>
+                <span class="radio__label">Выставка/показ</span>
+              </label>
+              <label class="radio__item">
+                <input class="radio__input" type="radio" name="format" value="other">
+                <span class="radio__mark"></span>
+                <span class="radio__label">Другое</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Количество гостей -->
+          <div class="form__section">
+            <label class="field">
+              <span class="field__title">Планируемое количество посетителей:</span>
+              <select class="field__select" name="amount">
+                <option value="20">до 20 человек</option>
+                <option value="100">от 20 до 100 человек</option>
+                <option value="500">от 100 до 500 человек</option>
+                <option value="1000">более 500 человек</option>
+              </select>
+            </label>
+          </div>
+
+          <!-- Контакты (имя фамилия) -->
+          <div class="form__row">
+            <div class="form__col">
+              <label class="field">
+                <span class="field__label">Имя*</span>
+                <input class="field__input" type="text" placeholder="Имя" name="name" required>
+              </label>
+            </div>
+            <div class="form__col">
+              <label class="field">
+                <span class="field__label">Фамилия*</span>
+                <input class="field__input" type="text" placeholder="Фамилия" name="surname" required>
+              </label>
+            </div>
+          </div>
+
+          <!-- Контакты -->
+          <div class="form__row">
+            <div class="form__col">
+              <label class="field">
+                <span class="field__label">Телефон*</span>
+                <input class="field__input" type="tel" placeholder="+7" name="phone" required>
+              </label>
+            </div>
+            <div class="form__col">
+              <label class="field">
+                <span class="field__label">Email*</span>
+                <input class="field__input" type="email" placeholder="Email" name="email" required>
+              </label>
+            </div>
+          </div>
+
+          <!-- Даты -->
+          <div class="form__section">
+            <div class="form__label">Дата проведения:</div>
+            <div class="form__date-row">
+              <input class="field__input field__input--date" type="text" placeholder="ДД" name="day" maxlength="2">
+              <input class="field__input field__input--date" type="text" placeholder="ММ" name="month" maxlength="2">
+              <input class="field__input field__input--date" type="text" placeholder="ГГГГ" name="year" maxlength="4">
+            </div>
+          </div>
+
+          <!-- Пожелания -->
+          <div class="form__section">
+            <label class="field">
+              <span class="field__title">Есть пожелания? Напишите нам:</span>
+              <textarea class="field__textarea" name="message" rows="3"></textarea>
+            </label>
+          </div>
+
+          <!-- Чекбокс -->
+          <div class="form__section">
+            <label class="check">
+              <input type="checkbox" name="agree" class="check__input" required checked />
+              <span class="check__mark"></span>
+              <span class="check__label check__label--s">
+                Я соглашаюсь с пользовательским соглашением и с политикой
+                использования персональных данных
+              </span>
+            </label>
+          </div>
+
+          <!-- Кнопки -->
+          <div class="form__buttons">
+            <button type="submit" class="form__button form__button--submit">Отправить</button>
+            <button type="button" class="form__button form__button--close" id="closePP">Закрыть</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>

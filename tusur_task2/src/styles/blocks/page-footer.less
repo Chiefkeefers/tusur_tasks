@@ -79,54 +79,54 @@
     }
   }
 
-  &__info{
+   &__info {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
 
-    &__text-container{
+    &__text-container {
       display: grid;
       align-items: end;
       gap: 20px;
+      width: 33%; 
 
-      &__text{
-        
-      }
-
-      &__links{
-        display: flex;
-        gap: 3.75rem;
-
-        &__link{
-          font-weight: 600;
-          font-size: 16px;
-          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-      }
     }
 
     &__button-container {
       display: flex;
-      vertical-align: middle;
       gap: 2.75rem;
-      padding: 0 4rem;
-      text-align: center;
+      justify-content: center;
+      align-items: center;
+      width: 33%;
+      height: 58px;
 
       &__button {
         background-color: rgba(31, 30, 30, 1);
         border-radius: 50%;
         width: 58px;
+        height: 58px;
         color: white;
-        aspect-ratio: 1/1;
         border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: rgba(51, 51, 51, 1);
+        }
       }
     }
 
-    &__author{
+    &__author {
       display: flex;
-      // justify-content: end;
       align-items: end;
       position: relative;
+      width: 33%;
+      justify-content: flex-end;
 
       &__text {
         font-weight: 600;
