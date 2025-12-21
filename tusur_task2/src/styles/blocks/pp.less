@@ -115,68 +115,7 @@
     }
 }
 
-.check {
-    box-sizing: border-box;
-    position: relative;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-    min-height: 24px;
-    padding-top: 2px;
-    padding-left: 24px;
-    color: @black;
-    cursor: pointer;
 
-    &__input {
-        .is-hidden();
-    }
-
-    &__mark {
-        box-sizing: border-box;
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 24px;
-        height: 24px;
-        border: 1px solid @black;
-    }
-
-    &__input {
-        .is-hidden();
-
-        &:checked {
-            &~.check__mark {
-                background-color: @black;
-
-                &::after {
-                    content: "";
-                    display: block;
-                    position: absolute;
-                    left: 7px;
-                    top: 2px;
-                    width: 6px;
-                    height: 12px;
-                    border-bottom: 2px solid @white;
-                    border-right: 2px solid @white;
-                    transform: rotate(45deg);
-                }
-            }
-        }
-    }
-
-    &__label {
-        margin-left: 15px;
-        font-weight: 300;
-        font-size: 16px;
-        line-height: 22px;
-
-        &--s {
-            font-size: 14px;
-            line-height: 19px;
-        }
-    }
-}
 
 .form {
     &__section {
@@ -259,7 +198,11 @@
     right: 0;
     bottom: 0;
     padding: 90px 95px 50px;
-    background-color: rgba(28, 27, 27, 0.4);
+    background-color: @gray;
+    background-image: url(../assets/images/noise.png);
+    background-position: 0 0;
+    background-size: auto;
+    background-repeat: repeat;
     backdrop-filter: blur(50px);
     overflow-y: auto;
     z-index: 110;
