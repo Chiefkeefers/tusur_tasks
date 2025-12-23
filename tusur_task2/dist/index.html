@@ -1,30 +1,64 @@
 <!DOCTYPE html>
 <html lang="ru">
-<html lang="ru">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 <!-- <html lang="ru" class="show-event-popup"> -->
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
   <title>Мой сайт</title>
   <link rel="stylesheet" href="styles/styles.css">
 
 </head>
 
 <body class="body">
-  <header class="page-header">
+  <!-- <header class="page-header">
     <nav class="page-header__navbar">
+        <svg class="page-header__logo"><use href="../../assets/icons/logo.svg"></svg>
+        <div class="page-header__nav-links">
+            <a href="#home" class="page-header__nav-link">Мероприятия</a>
+            <a href="#about" class="page-header__nav-link">Блог</a>
+            <a href="#services" class="page-header__nav-link">О нас</a>
+            <a href="#contacts" class="page-header__nav-link">Контакты</a>
+        </div>
+        <button class="page-header__nav-button">Войти</button>
+    </nav>
+</header> -->
+
+  <header class="page-header">
+    <div class="page-header__container">
       <svg class="page-header__logo">
         <use href="../../assets/icons/logo.svg">
       </svg>
-      <div class="page-header__nav-links">
-        <a href="#home" class="page-header__nav-link">Мероприятия</a>
-        <a href="#about" class="page-header__nav-link">Блог</a>
-        <a href="#services" class="page-header__nav-link">О нас</a>
-        <a href="#contacts" class="page-header__nav-link">Контакты</a>
+
+      <nav class="page-header__nav">
+        <a href="#" class="page-header__nav-link">Мероприятия</a>
+        <a href="#" class="page-header__nav-link">Блог</a>
+        <a href="#" class="page-header__nav-link">О нас</a>
+        <a href="#" class="page-header__nav-link">Контакты</a>
+
+        <div class="page-header__nav-user">
+          <a href="#" class="page-header__nav-user-link">
+            Александр С.
+          </a>
+          <button type="button" class="page-header__nav-logout">
+            <svg class="page-header__nav-logout-icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#door"></use>
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <div class="page-header__right-block">
+        <a href="#" class="page-header__user-btn">
+          Войти
+          <svg class="page-header__user-icon" width="21" height="18">
+            <use xlink:href="assets/icons/symbols.svg#user"></use>
+          </svg>
+        </a>
+        <button type="button" class="page-header__nav-toggle"></button>
       </div>
-      <button class="page-header__nav-button">Войти</button>
-    </nav>
+    </div>
   </header>
 
   <div class="quote-page">

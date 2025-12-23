@@ -3,35 +3,70 @@
   border-collapse: collapse;
   color: #1F1E1E;
   text-align: center;
+  
   &__tr {
     &:nth-child(2n-1) {
       background-color: fade(#1F1E1E, 3%);
     }
   }
+  
   &__th {
     height: 85px;
     font-weight: 600;
     font-size: 18px;
     line-height: 25px;
+    
+    @media @bw768 {
+      height: 65px;
+      font-size: 16px;
+      line-height: 22px;
+    }
+    
+    @media @bw600 {
+      height: 55px;
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
+  
   &__footer-th {
     height: 60px;
     font-size: 0;
+    
+    @media @bw768 {
+      height: 45px;
+    }
+    
+    @media @bw600 {
+      height: 35px;
+    }
   }
+  
   &__th,
   &__footer-th {
     box-sizing: border-box;
     padding: 10px;
     border-right: 1px solid #BFBFBF;
     text-transform: uppercase;
+    
+    @media @bw768 {
+      padding: 8px;
+    }
+    
+    @media @bw600 {
+      padding: 6px;
+    }
+    
     &:first-child {
       padding-left: 0;
     }
+    
     &:last-child {
       border-right: none;
       padding-right: 0;
     }
   }
+  
   &__body-th {
     box-sizing: border-box;
     height: 50px;
@@ -42,7 +77,22 @@
     font-size: 18px;
     line-height: 25px;
     text-align: left;
+    
+    @media @bw768 {
+      height: 40px;
+      font-size: 16px;
+      line-height: 22px;
+      padding: 8px 8px 8px 0;
+    }
+    
+    @media @bw600 {
+      height: 35px;
+      font-size: 14px;
+      line-height: 20px;
+      padding: 6px 6px 6px 0;
+    }
   }
+  
   &__td {
     box-sizing: border-box;
     height: 50px;
@@ -51,10 +101,43 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 22px;
-
+    
+    @media @bw768 {
+      height: 40px;
+      font-size: 14px;
+      line-height: 19px;
+      padding: 8px;
+    }
+    
+    @media @bw600 {
+      height: 35px;
+      font-size: 12px;
+      line-height: 16px;
+      padding: 6px;
+    }
+    
     &:last-child {
       border-right: none;
       padding-right: 0;
+    }
+  }
+}
+
+// Обертка для таблицы с горизонтальной прокруткой на мобильных
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  
+  @media @w768 {
+    overflow-x: visible;
+  }
+  
+  .table {
+    min-width: 600px; // Минимальная ширина для таблицы
+    
+    @media @w768 {
+      min-width: auto;
     }
   }
 }
@@ -67,6 +150,17 @@
   margin: auto;
   border-radius: 50%;
   background-color: #1F1E1E;
+  
+  @media @bw768 {
+    width: 22px;
+    height: 22px;
+  }
+  
+  @media @bw600 {
+    width: 18px;
+    height: 18px;
+  }
+  
   &::after {
     content: "";
     box-sizing: border-box;
@@ -79,5 +173,23 @@
     border-right: 2px solid #ffffff;
     border-bottom: 2px solid #ffffff;
     transform: rotate(45deg);
+    
+    @media @bw768 {
+      top: 3px;
+      left: 7px;
+      width: 7px;
+      height: 12px;
+      border-right-width: 1.5px;
+      border-bottom-width: 1.5px;
+    }
+    
+    @media @bw600 {
+      top: 2px;
+      left: 6px;
+      width: 6px;
+      height: 10px;
+      border-right-width: 1px;
+      border-bottom-width: 1px;
+    }
   }
 }

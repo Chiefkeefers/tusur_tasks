@@ -1,96 +1,328 @@
 .page-footer {
-  padding: 4.688rem 18.3rem;
+  .container;
+  padding: 4.688rem 0;
   height: auto;
-  &__img {
-    display: flex !important;
-    justify-content: center !important;
+  
+  @media @bw1660 {
+    padding: 4rem 0;
   }
+  
+  @media @bw1340 {
+    padding: 3.5rem 0;
+  }
+  
+  @media @bw1020 {
+    padding: 3rem 0;
+  }
+  
+  @media @bw768 {
+    padding: 2.5rem 0;
+  }
+  
+  @media @bw600 {
+    padding: 2rem 0;
+  }
+
+  &__img {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    
+    img {
+      max-width: 100%;
+      height: auto;
+      
+      @media @bw600 {
+        max-width: 150px;
+      }
+    }
+  }
+
   &__content {
     display: flex;
     margin: 3.75rem 0;
     width: 100%;
-    gap: 1rem;
-    display: flex;
+    gap: 2rem;
     justify-content: space-between;
+    
+    @media @bw1340 {
+      margin: 3rem 0;
+      gap: 1.5rem;
+    }
+    
+    @media @bw1020 {
+      flex-direction: column;
+      margin: 2.5rem 0;
+      gap: 2rem;
+    }
+    
+    @media @bw768 {
+      margin: 2rem 0;
+      gap: 1.5rem;
+    }
+    
+    @media @bw600 {
+      margin: 1.5rem 0;
+      gap: 1rem;
+    }
 
     &__text-container {
       border-left: 2px solid rgba(188, 51, 36, 1);
       display: grid;
       padding-left: 1.625rem;
       gap: 1.375rem;
+      flex: 1;
+      
+      @media @bw1020 {
+        border-left: none;
+        border-top: 2px solid rgba(188, 51, 36, 1);
+        padding-left: 0;
+        padding-top: 1.5rem;
+        width: 100%;
+      }
+      
+      @media @bw768 {
+        gap: 1rem;
+        padding-top: 1rem;
+      }
+      
+      @media @bw600 {
+        gap: 0.75rem;
+      }
 
       &__text {
-        color: black;
+        color: @black;
         font-weight: 600;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-family: "Open Sans", sans-serif;
         font-size: 16px;
+        text-decoration: none;
+        display: block;
+        transition: all 0.3s ease;
+        
+        @media @bw1340 {
+          font-size: 15px;
+        }
+        
+        @media @bw768 {
+          font-size: 14px;
+        }
+        
+        @media @bw600 {
+          font-size: 13px;
+          padding: 0.5rem 0;
+        }
 
-        &:hover, &:active {
-          transition: all 0.3s ease;
+        &:hover,
+        &:active {
           color: rgba(165, 21, 5, 1);
+          transform: translateX(5px);
+          
+          @media @bw1020 {
+            transform: translateX(0);
+          }
         }
       }
     }
 
     &__email-container {
-      &__input-container{
-        position: relative;
-        width: 25.313rem;
-        margin: 14px 0;
+      flex: 1;
+      max-width: 25.313rem;
+      
+      @media @bw1020 {
+        max-width: 100%;
+      }
 
-        &__input{
+      &__input-container {
+        position: relative;
+        width: 100%;
+        margin: 14px 0;
+        
+        @media @bw768 {
+          margin: 10px 0;
+        }
+
+        &__input {
           height: 3.063rem;
-          border: none;
+          border: 2px solid @black;
+          border-radius: 4px;
           width: 100%;
           padding: 0.938rem 1.75rem;
           outline: none;
+          font-family: "Open Sans", sans-serif;
+          font-size: 16px;
+          transition: border-color 0.3s ease;
+          
+          @media @bw1340 {
+            height: 2.8rem;
+            padding: 0.8rem 1.5rem;
+            font-size: 15px;
+          }
+          
+          @media @bw768 {
+            height: 2.5rem;
+            padding: 0.7rem 1.25rem;
+            font-size: 14px;
+          }
+          
+          @media @bw600 {
+            height: 2.2rem;
+            padding: 0.6rem 1rem;
+            font-size: 13px;
+          }
+
+          &:focus {
+            border-color: rgba(188, 51, 36, 1);
+          }
         }
-        &__button{
+
+        &__button {
           position: absolute;
-          padding: 15px 23px;
+          padding: 0 1.5rem;
           border: none;
           background-color: rgba(31, 30, 30, 1);
-          color: white;
+          color: @white;
           height: 100%;
           top: 0;
           right: 0;
+          font-family: "Open Sans", sans-serif;
+          font-weight: 600;
+          font-size: 16px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+          border-radius: 0 4px 4px 0;
+          
+          @media @bw1340 {
+            font-size: 15px;
+            padding: 0 1.25rem;
+          }
+          
+          @media @bw768 {
+            font-size: 14px;
+            padding: 0 1rem;
+          }
+          
+          @media @bw600 {
+            font-size: 13px;
+            padding: 0 0.75rem;
+          }
+
+          &:hover {
+            background-color: rgba(51, 51, 51, 1);
+          }
+          
+          &:active {
+            transform: scale(0.98);
+          }
         }
       }
 
       &__checkbox-container {
         display: flex;
-        align-items: center;
-        &__checkbox {
-          // appearance: none;
-          width: 24px;
-          aspect-ratio: 1/1;
-
-          // &:checked {
-          //   background: black !important;
-          // }
+        align-items: flex-start;
+        margin-top: 1rem;
+        
+        @media @bw768 {
+          margin-top: 0.75rem;
         }
+        
+        @media @bw600 {
+          margin-top: 0.5rem;
+        }
+
+        &__checkbox {
+          width: 24px;
+          height: 24px;
+          margin-top: 2px;
+          
+          @media @bw768 {
+            width: 20px;
+            height: 20px;
+          }
+          
+          @media @bw600 {
+            width: 18px;
+            height: 18px;
+          }
+        }
+
         &__label {
           margin-left: 15px;
           font-size: 14px;
           font-weight: 300;
-          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          font-family: "Open Sans", sans-serif;
+          color: @black;
+          line-height: 1.4;
+          
+          @media @bw768 {
+            font-size: 13px;
+            margin-left: 10px;
+          }
+          
+          @media @bw600 {
+            font-size: 12px;
+            margin-left: 8px;
+          }
         }
       }
     }
   }
 
-   &__info {
+  &__info {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    padding-top: 2rem;
+    border-top: 1px solid fade(@black, 20%);
+    
+    @media @bw1020 {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 2rem;
+      padding-top: 1.5rem;
+    }
+    
+    @media @bw768 {
+      gap: 1.5rem;
+    }
+    
+    @media @bw600 {
+      gap: 1rem;
+      padding-top: 1rem;
+    }
 
     &__text-container {
       display: grid;
       align-items: end;
       gap: 20px;
-      width: 33%; 
+      width: 33%;
+      
+      @media @bw1020 {
+        width: 100%;
+        order: 3;
+        align-items: center;
+        gap: 15px;
+      }
+      
+      @media @bw600 {
+        gap: 10px;
+      }
 
+      p {
+        font-size: 14px;
+        color: @black;
+        font-family: "Open Sans", sans-serif;
+        margin: 0;
+        
+        @media @bw768 {
+          font-size: 13px;
+        }
+        
+        @media @bw600 {
+          font-size: 12px;
+        }
+      }
     }
 
     &__button-container {
@@ -100,44 +332,130 @@
       align-items: center;
       width: 33%;
       height: 58px;
+      
+      @media @bw1020 {
+        width: 100%;
+        order: 1;
+      }
+      
+      @media @bw768 {
+        gap: 2rem;
+        height: 50px;
+      }
+      
+      @media @bw600 {
+        gap: 1.5rem;
+        height: 45px;
+      }
 
       &__button {
         background-color: rgba(31, 30, 30, 1);
         border-radius: 50%;
         width: 58px;
         height: 58px;
-        color: white;
+        color: @white;
         border: none;
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 16px;
         cursor: pointer;
-        transition: background-color 0.3s ease;
+        transition: all 0.3s ease;
+        
+        @media @bw768 {
+          width: 50px;
+          height: 50px;
+          font-size: 15px;
+        }
+        
+        @media @bw600 {
+          width: 45px;
+          height: 45px;
+          font-size: 14px;
+        }
 
         &:hover {
           background-color: rgba(51, 51, 51, 1);
+          transform: translateY(-3px);
+        }
+        
+        &:active {
+          transform: translateY(-1px) scale(0.95);
         }
       }
     }
 
     &__author {
       display: flex;
-      align-items: end;
+      align-items: flex-end;
       position: relative;
       width: 33%;
       justify-content: flex-end;
+      
+      @media @bw1020 {
+        width: 100%;
+        order: 2;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
 
       &__text {
         font-weight: 600;
         font-size: 16px;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-family: "Open Sans", sans-serif;
         padding-right: 5.563rem;
+        color: @black;
+        
+        @media @bw1340 {
+          font-size: 15px;
+          padding-right: 4rem;
+        }
+        
+        @media @bw1020 {
+          padding-right: 0;
+          margin-bottom: 0.5rem;
+          text-align: center;
+        }
+        
+        @media @bw768 {
+          font-size: 14px;
+        }
+        
+        @media @bw600 {
+          font-size: 13px;
+        }
       }
+      
       &__img {
         position: absolute;
         right: 0;
         bottom: -5px;
+        
+        @media @bw1340 {
+          width: 100px;
+          height: auto;
+        }
+        
+        @media @bw1020 {
+          position: relative;
+          bottom: 0;
+          right: 0;
+          margin-top: 0.5rem;
+        }
+        
+        @media @bw768 {
+          width: 90px;
+        }
+        
+        @media @bw600 {
+          width: 80px;
+        }
+        
+        img {
+          max-width: 100%;
+          height: auto;
+        }
       }
     }
   }

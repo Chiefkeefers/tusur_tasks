@@ -15,38 +15,67 @@ body {
     background-position: 0 0;
     background-size: auto;
     background-repeat: repeat;
-    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6;
+    color: @black;
+    padding-top: 147px; // Отступ для фиксированной шапки
+
+    @media @bw1660 {
+        padding-top: 111px;
+    }
+
+    @media @bw768 {
+        padding-top: 70px;
+    }
 }
 
 .show-event-popup {
-  body {
-    overflow: hidden;
-  }
+    body {
+        overflow: hidden;
+    }
 
-  #eventPP {
-    display: flex;
-  }
+    #eventPP {
+        display: flex;
+    }
 }
 
 main {
     flex: 1;
     padding-bottom: 2rem;
     padding-inline: 10em;
+
+    @media @bw1340 {
+        padding-inline: 5em;
+    }
+
+    @media @bw1020 {
+        padding-inline: 3em;
+    }
+
+    @media @bw768 {
+        padding-inline: 2em;
+    }
+
+    @media @bw600 {
+        padding-inline: 1em;
+    }
 }
 
 input,
 textarea,
 select {
-  box-shadow: none;
-  outline: none;
-//   color: @black;
-//   font-family: @font1;
+    box-shadow: none;
+    outline: none;
+    font-family: "Open Sans", sans-serif;
 }
+
 textarea {
-  resize: none;
+    resize: none;
 }
 
 .check {
@@ -74,6 +103,11 @@ textarea {
         width: 24px;
         height: 24px;
         border: 1px solid @black;
+
+        @media @bw600 {
+            width: 20px;
+            height: 20px;
+        }
     }
 
     &__input {
@@ -94,6 +128,13 @@ textarea {
                     border-bottom: 2px solid @white;
                     border-right: 2px solid @white;
                     transform: rotate(45deg);
+
+                    @media @bw600 {
+                        left: 5px;
+                        top: 0;
+                        width: 5px;
+                        height: 10px;
+                    }
                 }
             }
         }
@@ -106,6 +147,12 @@ textarea {
         line-height: 22px;
 
         &--s {
+            font-size: 14px;
+            line-height: 19px;
+        }
+
+        @media @bw600 {
+            margin-left: 10px;
             font-size: 14px;
             line-height: 19px;
         }
