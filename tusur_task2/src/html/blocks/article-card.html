@@ -1,8 +1,12 @@
-<!-- article-card.html -->
 <article class="article-card @@class">
-  <a class="article-card__link" href="#">
+  <a href="#" class="article-card__link">
     <div class="article-card__picture">
-      <img class="article-card__img" src="@@img" alt="@@alt" />
+      <picture>
+        <source srcset="@@img_webp" type="image/webp" media="(min-width: 1024px)">
+        <source srcset="@@img_tablet_webp" type="image/webp">
+        <source srcset="@@img" media="(min-width: 1024px)">
+        <img src="@@img_tablet" alt="@@alt" loading="lazy" class="article-card__img">
+      </picture>
     </div>
     
     <div class="article-card__content">
@@ -10,7 +14,13 @@
       <h3 class="article-card__title">@@title</h3>
       <p class="article-card__description">@@descr</p>
     </div>
+    
+    <div class="article-card__arrow-wrapper">
+      <button type="button" class="article-card__arrow" aria-label="Читать далее">
+        <svg class="article-card__arrow-icon">
+          <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+        </svg>
+      </button>
+    </div>
   </a>
-  
-  <hr/>
 </article>

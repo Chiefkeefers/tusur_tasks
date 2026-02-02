@@ -64,7 +64,21 @@
     <div class="quote-page__text-container">
       <div class="quote-page__text">АРТ - Пространство</div>
     </div>
-    <img class="quote-page__img" src="../../assets/images/blog/LENNI.png">
+
+    <div class="quote-page__image-container">
+      <picture class="quote-page__picture">
+        <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/blog/LENNI.webp" />
+        <source media="(max-width: 450px)" srcset="assets/images/blog/LENNI.png" />
+
+        <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/blog/LENNI_tablet.webp" />
+        <source media="(max-width: 1169px)" srcset="assets/images/blog/LENNI_tablet.png" />
+
+        <source type="image/webp" srcset="assets/images/blog/LENNI.webp" />
+
+        <img src="assets/images/blog/LENNI.png" alt="LENNI ART" class="quote-page__img" />
+      </picture>
+    </div>
+
     <div class="quote-page__text-container">
       <div class="quote-page__text">для людей, горящих сердцЕМ и делом место для настоящего</div>
     </div>
@@ -81,31 +95,64 @@
         <article class="event-card listing__event-card">
           <a href="#" class="event-card__link">
             <picture class="event-card__picture">
+              <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/events/nirvana.webp" />
+              <source media="(max-width: 450px)" srcset="assets/images/events/nirvana.jpg" />
+
+              <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/events/nirvana_tablet.webp" />
+              <source media="(max-width: 1169px)" srcset="assets/images/events/nirvana_tablet.jpg" />
+
+              <source type="image/webp" srcset="assets/images/events/nirvana.webp" />
+
               <img src="assets/images/events/nirvana.jpg" alt="nirvana" class="event-card__img" />
             </picture>
-            <h4 class="event-card__title">Собираемся и слушаем альбом Nirvana</h4>
-            <p class="event-card__description">Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.</p>
-            <time datetime="2025-12-07T18:00" class="event-card__time">07.12.2025 | начало 18.00</time>
+
+            <div class="event-card__content">
+              <h4 class="event-card__title">Собираемся и слушаем альбом Nirvana</h4>
+              <p class="event-card__description">Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.</p>
+              <time datetime="2025-12-07T18:00" class="event-card__time">07.12.2025 | начало 18.00</time>
+            </div>
           </a>
         </article>
         <article class="event-card listing__event-card">
           <a href="#" class="event-card__link">
             <picture class="event-card__picture">
+              <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/events/stuff.webp" />
+              <source media="(max-width: 450px)" srcset="assets/images/events/stuff.jpg" />
+
+              <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/events/stuff_tablet.webp" />
+              <source media="(max-width: 1169px)" srcset="assets/images/events/stuff_tablet.jpg" />
+
+              <source type="image/webp" srcset="assets/images/events/stuff.webp" />
+
               <img src="assets/images/events/stuff.jpg" alt="stuff" class="event-card__img" />
             </picture>
-            <h4 class="event-card__title">Есть тема, нужно обсудить с HowStuffWorks</h4>
-            <p class="event-card__description">Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.</p>
-            <time datetime="2025-12-14T18:30" class="event-card__time">14.12.2025 | начало 18.30</time>
+
+            <div class="event-card__content">
+              <h4 class="event-card__title">Есть тема, нужно обсудить с HowStuffWorks</h4>
+              <p class="event-card__description">Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.</p>
+              <time datetime="2025-12-14T18:30" class="event-card__time">14.12.2025 | начало 18.30</time>
+            </div>
           </a>
         </article>
         <article class="event-card listing__event-card">
           <a href="#" class="event-card__link">
             <picture class="event-card__picture">
-              <img src="assets/images/events/Sade.jpg" alt="stuff" class="event-card__img" />
+              <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/events/Sade.webp" />
+              <source media="(max-width: 450px)" srcset="assets/images/events/Sade.jpg" />
+
+              <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/events/Sade_tablet.webp" />
+              <source media="(max-width: 1169px)" srcset="assets/images/events/Sade_tablet.jpg" />
+
+              <source type="image/webp" srcset="assets/images/events/Sade.webp" />
+
+              <img src="assets/images/events/Sade.jpg" alt="Sade" class="event-card__img" />
             </picture>
-            <h4 class="event-card__title">Вечер | The Best of Sade</h4>
-            <p class="event-card__description">Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.</p>
-            <time datetime="2025-12-14T18:30" class="event-card__time">16.12.2024 | начало 20.00</time>
+
+            <div class="event-card__content">
+              <h4 class="event-card__title">Вечер | The Best of Sade</h4>
+              <p class="event-card__description">Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.</p>
+              <time datetime="2024-12-16T20:00" class="event-card__time">16.12.2024 | начало 20.00</time>
+            </div>
           </a>
         </article>
       </div>
@@ -218,11 +265,15 @@
         <h2 class="listing__title section-title">БЛОГ</h2>
 
         <div class="listing__article-list">
-          <!-- article-card.html -->
           <article class="article-card listing__article-card">
-            <a class="article-card__link" href="#">
+            <a href="#" class="article-card__link">
               <div class="article-card__picture">
-                <img class="article-card__img" src="assets/images/blog/theatre.jpg" alt="Theatre Photosession" />
+                <picture>
+                  <source srcset="assets/images/blog/theatre.webp" type="image/webp" media="(min-width: 1024px)">
+                  <source srcset="assets/images/blog/theatre_tablet.webp" type="image/webp">
+                  <source srcset="assets/images/blog/theatre.jpg" media="(min-width: 1024px)">
+                  <img src="assets/images/blog/theatre_tablet.jpg" alt="Theatre Photosession" loading="lazy" class="article-card__img">
+                </picture>
               </div>
 
               <div class="article-card__content">
@@ -230,14 +281,25 @@
                 <h3 class="article-card__title">Фотосессия в стенах Театра драмы</h3>
                 <p class="article-card__description">Организована фотосессия для поданного бренда. Одежда мы смогли восполнить все показания заказчика и у нас получилось отличная работа. Смотрите как это было</p>
               </div>
-            </a>
 
-            <hr />
-          </article><!-- article-card.html -->
+              <div class="article-card__arrow-wrapper">
+                <button type="button" class="article-card__arrow" aria-label="Читать далее">
+                  <svg class="article-card__arrow-icon">
+                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                  </svg>
+                </button>
+              </div>
+            </a>
+          </article>
           <article class="article-card listing__article-card">
-            <a class="article-card__link" href="#">
+            <a href="#" class="article-card__link">
               <div class="article-card__picture">
-                <img class="article-card__img" src="assets/images/blog/vr.jpg" alt="VR Exhibition" />
+                <picture>
+                  <source srcset="assets/images/blog/vr.webp" type="image/webp" media="(min-width: 1024px)">
+                  <source srcset="assets/images/blog/vr_tablet.webp" type="image/webp">
+                  <source srcset="assets/images/blog/vr.jpg" media="(min-width: 1024px)">
+                  <img src="assets/images/blog/vr_tablet.jpg" alt="VR Exhibition" loading="lazy" class="article-card__img">
+                </picture>
               </div>
 
               <div class="article-card__content">
@@ -245,14 +307,25 @@
                 <h3 class="article-card__title">Выставка VR в Томске</h3>
                 <p class="article-card__description">Кофе виртуальной реальности - это другие миры, яркие эмоции, новый опыт… Мы представляем нашим клиентам лучший игровой VR-опыт в Томске.</p>
               </div>
-            </a>
 
-            <hr />
-          </article><!-- article-card.html -->
+              <div class="article-card__arrow-wrapper">
+                <button type="button" class="article-card__arrow" aria-label="Читать далее">
+                  <svg class="article-card__arrow-icon">
+                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                  </svg>
+                </button>
+              </div>
+            </a>
+          </article>
           <article class="article-card listing__article-card">
-            <a class="article-card__link" href="#">
+            <a href="#" class="article-card__link">
               <div class="article-card__picture">
-                <img class="article-card__img" src="assets/images/blog/rock.jpg" alt="Rock Concert" />
+                <picture>
+                  <source srcset="assets/images/blog/rock.webp" type="image/webp" media="(min-width: 1024px)">
+                  <source srcset="assets/images/blog/rock_tablet.webp" type="image/webp">
+                  <source srcset="assets/images/blog/rock.jpg" media="(min-width: 1024px)">
+                  <img src="assets/images/blog/rock_tablet.jpg" alt="Rock Concert" loading="lazy" class="article-card__img">
+                </picture>
               </div>
 
               <div class="article-card__content">
@@ -260,9 +333,15 @@
                 <h3 class="article-card__title">Rocking radio в заброшенном ангаре</h3>
                 <p class="article-card__description">15 электрогенераторов, километры проводов и пару тонн света. Все это для того, чтобы организовать лучшую вечеринку года для ребят из Новосибирска.</p>
               </div>
-            </a>
 
-            <hr />
+              <div class="article-card__arrow-wrapper">
+                <button type="button" class="article-card__arrow" aria-label="Читать далее">
+                  <svg class="article-card__arrow-icon">
+                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                  </svg>
+                </button>
+              </div>
+            </a>
           </article>
         </div>
 
