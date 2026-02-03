@@ -898,9 +898,6 @@ textarea {
   margin-bottom: 2rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid #eee;
-  /* Колонка 1: Картинка */
-  /* Колонка 2: Текст */
-  /* Колонка 3: Стрелка */
 }
 .article-card:last-child {
   margin-bottom: 0;
@@ -914,9 +911,6 @@ textarea {
   gap: 2rem;
   text-decoration: none;
   color: inherit;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
 }
 .article-card__picture {
   width: 300px;

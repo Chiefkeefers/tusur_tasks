@@ -150,7 +150,6 @@
     gap: 2rem;
     text-decoration: none;
     color: inherit;
-    align-items: flex-start;
 
     @media @bw768 {
       flex-direction: column;
@@ -158,7 +157,6 @@
     }
   }
 
-  /* Колонка 1: Картинка */
   &__picture {
     width: 300px;
     height: 200px;
@@ -188,7 +186,6 @@
     }
   }
 
-  /* Колонка 2: Текст */
   &__content {
     flex: 1;
     min-width: 0; // Важно для обрезания длинного текста
@@ -218,13 +215,12 @@
     color: #666;
   }
 
-  /* Колонка 3: Стрелка */
   &__arrow-wrapper {
     flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100px; // Фиксированная ширина для стрелки
+    width: 100px;
 
     @media @bw1340 {
       width: 80px;
