@@ -27,13 +27,19 @@ body {
 }
 
 .show-event-popup {
-    body {
-        overflow: hidden;
-    }
+  body {
+    overflow: hidden;
+  }
 
-    #eventPP {
-        display: flex;
-    }
+  #js-eventPP {
+    display: flex;
+  }
+}
+
+.x-btn {
+  &__icon {
+    pointer-events: none;
+  }
 }
 
 main {
@@ -174,5 +180,29 @@ textarea {
   &__icon {
     width: 100%;
     height: 100%;
+  }
+}
+
+.show-nav {
+  body {
+    @media @bw1020 {
+      overflow: hidden;
+    }
+  }
+
+  .page-header__nav {
+    @media @bw1020 {
+      transform: translateX(0);
+    }
+  }
+
+  .page-header__nav-toggle {
+    &::before {
+      transform: translate(0px, 6px) rotate(45deg);
+      box-shadow: none;
+    }
+    &::after {
+      transform: translate(0px, -6px) rotate(-45deg);
+    }
   }
 }

@@ -10,21 +10,13 @@
   <link rel="stylesheet" href="styles/styles.css">
 
 </head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key="></script>
+<script src="scripts/main.min.js"></script>
+<script src="scripts/main.js"></script>
 
 <body class="body">
-  <!-- <header class="page-header">
-    <nav class="page-header__navbar">
-        <svg class="page-header__logo"><use href="../../assets/icons/logo.svg"></svg>
-        <div class="page-header__nav-links">
-            <a href="#home" class="page-header__nav-link">Мероприятия</a>
-            <a href="#about" class="page-header__nav-link">Блог</a>
-            <a href="#services" class="page-header__nav-link">О нас</a>
-            <a href="#contacts" class="page-header__nav-link">Контакты</a>
-        </div>
-        <button class="page-header__nav-button">Войти</button>
-    </nav>
-</header> -->
-
   <header class="page-header">
     <div class="page-header__container">
       <svg class="page-header__logo" viewBox="0 0 200 147" preserveAspectRatio="xMidYMid meet">
@@ -55,7 +47,7 @@
             <use xlink:href="assets/icons/symbols.svg#user"></use>
           </svg>
         </a>
-        <button type="button" class="page-header__nav-toggle"></button>
+        <button type="button" class="page-header__nav-toggle" id="js-navToggle"></button>
       </div>
     </div>
   </header>
@@ -86,14 +78,164 @@
     <div class="quote-page__text-container">
       <div class="quote-page__text">Я хочу:</div>
     </div>
+    <div class="quote-page__button">
+      <button type="button" class="offers__btn btn btn--red" id="js-eventOpenBtn">
+        Провести мероприятие
+      </button>
+    </div>
   </div>
+  <section class="upcoming @@class">
+    <div class="upcoming__wrapper">
+      <div class="upcoming__conainer">
+        <h2 class="upcoming__title section-title">Мероприятия</h2>
+
+        <div class="upcoming__swiper swiper swiper--3s js-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <article class="event-card ">
+                <a href="../blocks/event.html" class="event-card__link">
+                  <picture class="event-card__picture">
+                    <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/events/nirvana.webp" />
+                    <source media="(max-width: 450px)" srcset="assets/images/events/nirvana.jpg" />
+
+                    <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/events/nirvana_tablet.webp" />
+                    <source media="(max-width: 1169px)" srcset="assets/images/events/nirvana_tablet.jpg" />
+
+                    <source type="image/webp" srcset="assets/images/events/nirvana.webp" />
+
+                    <img src="assets/images/events/nirvana.jpg" alt="nirvana" class="event-card__img" />
+                  </picture>
+
+                  <div class="event-card__content">
+                    <h4 class="event-card__title">Собираемся и слушаем альбом Nirvana</h4>
+                    <p class="event-card__description">Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.</p>
+                    <time datetime="2025-12-07T18:00" class="event-card__time">07.12.2025 | начало 18.00</time>
+                  </div>
+                </a>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="event-card ">
+                <a href="../blocks/event.html" class="event-card__link">
+                  <picture class="event-card__picture">
+                    <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/events/nirvana.webp" />
+                    <source media="(max-width: 450px)" srcset="assets/images/events/nirvana.jpg" />
+
+                    <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/events/nirvana_tablet.webp" />
+                    <source media="(max-width: 1169px)" srcset="assets/images/events/nirvana_tablet.jpg" />
+
+                    <source type="image/webp" srcset="assets/images/events/nirvana.webp" />
+
+                    <img src="assets/images/events/nirvana.jpg" alt="nirvana" class="event-card__img" />
+                  </picture>
+
+                  <div class="event-card__content">
+                    <h4 class="event-card__title">Собираемся и слушаем альбом Nirvana</h4>
+                    <p class="event-card__description">Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.</p>
+                    <time datetime="2025-12-07T18:00" class="event-card__time">07.12.2025 | начало 18.00</time>
+                  </div>
+                </a>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="event-card ">
+                <a href="../blocks/event.html" class="event-card__link">
+                  <picture class="event-card__picture">
+                    <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/events/nirvana.webp" />
+                    <source media="(max-width: 450px)" srcset="assets/images/events/nirvana.jpg" />
+
+                    <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/events/nirvana_tablet.webp" />
+                    <source media="(max-width: 1169px)" srcset="assets/images/events/nirvana_tablet.jpg" />
+
+                    <source type="image/webp" srcset="assets/images/events/nirvana.webp" />
+
+                    <img src="assets/images/events/nirvana.jpg" alt="nirvana" class="event-card__img" />
+                  </picture>
+
+                  <div class="event-card__content">
+                    <h4 class="event-card__title">Собираемся и слушаем альбом Nirvana</h4>
+                    <p class="event-card__description">Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.</p>
+                    <time datetime="2025-12-07T18:00" class="event-card__time">07.12.2025 | начало 18.00</time>
+                  </div>
+                </a>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="event-card ">
+                <a href="../blocks/event.html" class="event-card__link">
+                  <picture class="event-card__picture">
+                    <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/events/stuff.webp" />
+                    <source media="(max-width: 450px)" srcset="assets/images/events/stuff.jpg" />
+
+                    <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/events/stuff_tablet.webp" />
+                    <source media="(max-width: 1169px)" srcset="assets/images/events/stuff_tablet.jpg" />
+
+                    <source type="image/webp" srcset="assets/images/events/stuff.webp" />
+
+                    <img src="assets/images/events/stuff.jpg" alt="stuff" class="event-card__img" />
+                  </picture>
+
+                  <div class="event-card__content">
+                    <h4 class="event-card__title">Есть тема, нужно обсудить с HowStuffWorks</h4>
+                    <p class="event-card__description">Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.</p>
+                    <time datetime="2025-12-14T18:30" class="event-card__time">14.12.2025 | начало 18.30</time>
+                  </div>
+                </a>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="event-card ">
+                <a href="../blocks/event.html" class="event-card__link">
+                  <picture class="event-card__picture">
+                    <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/events/Sade.webp" />
+                    <source media="(max-width: 450px)" srcset="assets/images/events/Sade.jpg" />
+
+                    <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/events/Sade_tablet.webp" />
+                    <source media="(max-width: 1169px)" srcset="assets/images/events/Sade_tablet.jpg" />
+
+                    <source type="image/webp" srcset="assets/images/events/Sade.webp" />
+
+                    <img src="assets/images/events/Sade.jpg" alt="Sade" class="event-card__img" />
+                  </picture>
+
+                  <div class="event-card__content">
+                    <h4 class="event-card__title">Вечер | The Best of Sade</h4>
+                    <p class="event-card__description">Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.</p>
+                    <time datetime="2024-12-16T20:00" class="event-card__time">16.12.2024 | начало 20.00</time>
+                  </div>
+                </a>
+              </article>
+            </div>
+          </div>
+
+          <footer class="swiper-footer">
+            <button type="button" class="swiper-arrow-prev arrow arrow--left">
+              <svg class="arrow__icon" width="92" height="62">
+                <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+              </svg>
+            </button>
+
+            <div class="swiper-pagination"></div>
+            <button type="button" class="swiper-arrow-next arrow">
+              <svg class="arrow__icon" width="92" height="62">
+                <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+              </svg>
+            </button>
+          </footer>
+        </div>
+
+        <a href="#" class="upcoming__link link">Смотреть все</a>
+      </div>
+    </div>
+  </section>
+
   <main class="main">
     <section class="listing events__listing @@class">
       <h2 class="listing__title section-title">Мероприятия</h2>
 
       <div class="listing__events-list">
         <article class="event-card listing__event-card">
-          <a href="#" class="event-card__link">
+          <a href="../blocks/event.html" class="event-card__link">
             <picture class="event-card__picture">
               <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/events/nirvana.webp" />
               <source media="(max-width: 450px)" srcset="assets/images/events/nirvana.jpg" />
@@ -114,7 +256,7 @@
           </a>
         </article>
         <article class="event-card listing__event-card">
-          <a href="#" class="event-card__link">
+          <a href="../blocks/event.html" class="event-card__link">
             <picture class="event-card__picture">
               <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/events/stuff.webp" />
               <source media="(max-width: 450px)" srcset="assets/images/events/stuff.jpg" />
@@ -135,7 +277,7 @@
           </a>
         </article>
         <article class="event-card listing__event-card">
-          <a href="#" class="event-card__link">
+          <a href="../blocks/event.html" class="event-card__link">
             <picture class="event-card__picture">
               <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/events/Sade.webp" />
               <source media="(max-width: 450px)" srcset="assets/images/events/Sade.jpg" />
@@ -285,7 +427,7 @@
               <div class="article-card__arrow-wrapper">
                 <button type="button" class="article-card__arrow" aria-label="Читать далее">
                   <svg class="article-card__arrow-icon">
-                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                    <use xlink:href="assets/icons/symbols.svg#link"></use>
                   </svg>
                 </button>
               </div>
@@ -311,7 +453,7 @@
               <div class="article-card__arrow-wrapper">
                 <button type="button" class="article-card__arrow" aria-label="Читать далее">
                   <svg class="article-card__arrow-icon">
-                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                    <use xlink:href="assets/icons/symbols.svg#link"></use>
                   </svg>
                 </button>
               </div>
@@ -337,7 +479,7 @@
               <div class="article-card__arrow-wrapper">
                 <button type="button" class="article-card__arrow" aria-label="Читать далее">
                   <svg class="article-card__arrow-icon">
-                    <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                    <use xlink:href="assets/icons/symbols.svg#link"></use>
                   </svg>
                 </button>
               </div>
@@ -631,10 +773,10 @@
       </div>
     </div>
   </footer>
-  <div class="pp" id="eventPP">
+  <div class="pp" id="js-eventPP">
     <div class="pp__wrapper">
       <div class="pp__sticky-close">
-        <button class="pp__x-btn x-btn">
+        <button class="pp__x-btn x-btn js-ppCloseBtn">
           <svg class="x-btn__icon" width="30" height="30">
             <use xlink:href="assets/icons/symbols.svg#x"></use>
           </svg>
@@ -752,12 +894,14 @@
           <!-- Кнопки -->
           <div class="form__buttons">
             <button type="submit" class="form__button form__button--submit">Отправить</button>
-            <button type="button" class="form__button form__button--close" id="closePP">Закрыть</button>
+            <button type="button" class="form__button form__button--close js-ppCloseBtn" id="closePP">Закрыть</button>
           </div>
         </form>
       </div>
     </div>
   </div>
+  <div class="" id="js-contactsMap"></div>
 </body>
+
 
 </html>

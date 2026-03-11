@@ -3,11 +3,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 <!-- <html lang="ru" class="show-event-popup"> -->
 @@include('blocks/head.html')
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key="></script>
+<script src="scripts/main.min.js"></script>
+<script src="scripts/main.js"></script>
 <body class="body">
     @@include('blocks/page-header.html')
 
     @@include('blocks/quote.html')
+    @@include('blocks/swiper.html')
+    
     <main class="main">
         @@include('blocks/event-card.html')
         <div class="home">
@@ -18,6 +24,8 @@
 
     @@include('blocks/page-footer.html')
     @@include('blocks/event-pp.html')
+    <div class="" id="js-contactsMap"></div>
 </body>
+	
 
 </html>
