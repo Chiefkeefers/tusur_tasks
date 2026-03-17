@@ -8,13 +8,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
   <title>Мой сайт</title>
   <link rel="stylesheet" href="styles/styles.css">
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key="></script>
+  <script src="scripts/main.min.js"></script>
+  <script src="scripts/main.js"></script>
 </head>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key="></script>
-<script src="scripts/main.min.js"></script>
-<script src="scripts/main.js"></script>
 
 <body class="body">
   <header class="page-header">
@@ -722,7 +721,9 @@
       </div>
     </section>
   </main>
-
+  <div class="map_container">
+    <div class="map_container__map" id="js-contactsMap"></div>
+  </div>
   <footer class="page-footer">
     <div class="page-footer__img">
       <img src="../../assets/images/blog/Footer.png" />
@@ -900,7 +901,6 @@
       </div>
     </div>
   </div>
-  <div class="" id="js-contactsMap"></div>
 </body>
 
 

@@ -408,6 +408,18 @@ textarea {
       -ms-transform: translate(0px, -6px) rotate(-45deg);
           transform: translate(0px, -6px) rotate(-45deg);
 }
+.map_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.map_container__map {
+  height: 30em;
+  width: 50em;
+}
 .container {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
