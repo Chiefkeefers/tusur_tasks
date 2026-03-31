@@ -7,7 +7,7 @@
     top: 27px;
     width: 8px;
     height: 2px;
-    background-color: @black;
+    background-color: #000000;
     transition: transform .2s;
     z-index: 10;
   }
@@ -15,19 +15,11 @@
   &::after {
     right: 22px;
     transform: rotate(-45deg);
-
-    @media @bw500 {
-      right: 12px;
-    }
   }
 
   &::before {
     right: 27px;
     transform: rotate(45deg);
-
-    @media @bw500 {
-      right: 17px;
-    }
   }
 }
 
@@ -68,9 +60,6 @@
     height: 100%;
     font-size: 16px;
     line-height: 1;
-    @media @bw400 {
-      font-size: 14px;
-    }
   }
 } 
 
@@ -87,8 +76,5 @@
   & li {
     padding: 10px 23px;
     font-size: 16px;
-    @media @bw400 {
-      font-size: 14px;
-    }
   }
 }
