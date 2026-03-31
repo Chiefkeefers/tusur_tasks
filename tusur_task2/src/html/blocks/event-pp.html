@@ -43,7 +43,7 @@
                 <div class="form__section">
                     <label class="field">
                         <span class="field__title">Планируемое количество посетителей:</span>
-                        <select class="field__select" name="amount">
+                        <select class="field__select js-selectric" name="amount">
                             <option value="20">до 20 человек</option>
                             <option value="100">от 20 до 100 человек</option>
                             <option value="500">от 100 до 500 человек</option>
@@ -73,7 +73,7 @@
                     <div class="form__col">
                         <label class="field">
                             <span class="field__label">Телефон*</span>
-                            <input class="field__input" type="tel" placeholder="+7" name="phone" required>
+                            <input class="field__input js-mobileMask" type="tel" placeholder="+7" name="phone" required>
                         </label>
                     </div>
                     <div class="form__col">
@@ -85,12 +85,18 @@
                 </div>
 
                 <!-- Даты -->
-                <div class="form__section">
-                    <div class="form__label">Дата проведения:</div>
-                    <div class="form__date-row">
-                        <input class="field__input field__input--date" type="text" placeholder="ДД" name="day" maxlength="2">
-                        <input class="field__input field__input--date" type="text" placeholder="ММ" name="month" maxlength="2">
-                        <input class="field__input field__input--date" type="text" placeholder="ГГГГ" name="year" maxlength="4">
+                <div class="form__field field js-dateField">
+                    <h6 class="field__title">Дата проведения:</h6>
+
+                    <div class="field__date">
+                        <div class="field__date-inputs">
+                            <input class="field__date-input js-dateDay" type="text" placeholder="ДД" readonly />
+                            <input class="field__date-input js-dateMonth" type="text" placeholder="ММ" readonly />
+                            <input class="field__date-input field__date-input--year js-dateYear" type="text"
+                                placeholder="ГГГГ" readonly />
+                        </div>
+
+                        <input class="field__date-picker js-dateInput" type="text" name="date" readonly required />
                     </div>
                 </div>
 
@@ -117,7 +123,8 @@
                 <!-- Кнопки -->
                 <div class="form__buttons">
                     <button type="submit" class="form__button form__button--submit">Отправить</button>
-                    <button type="button" class="form__button form__button--close js-ppCloseBtn" id="closePP">Закрыть</button>
+                    <button type="button" class="form__button form__button--close js-ppCloseBtn"
+                        id="closePP">Закрыть</button>
                 </div>
             </form>
         </div>
