@@ -6,11 +6,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-  <title>Мой сайт</title>
+  <title>Lenni Art</title>
+
+  <meta name="description" content="Арт—пространство для людей, горящих сердец и делом">
+  <meta name="keywords" content="Lenni Art, пространство, мероприятия, искусство, творчество">
+  <meta name="author" content="Lenni Art">
+
+  <meta property="og:title" content="Lenni Art">
+  <meta property="og:description" content="Арт пространство для людей, горящих сердцем и делом">
+  <meta property="og:image" content="/assets/images/lenni-art.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lenni-art.ru/">
+  <meta property="og:site_name" content="Lenni Art">
+  <meta property="og:locale" content="ru_RU">
+
+  <link rel="icon" type="image/png" href="assets/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="assets/favicons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png" />
+  <link rel="manifest" href="assets/favicons/site.webmanifest" />
+
+  <meta name="msapplication-TileColor" content="#dedede">
+  <meta name="theme-color" content="#dedede">
+  <meta name="apple-mobile-web-app-title" content="Lenni Art">
+  <meta name="application-name" content="Lenni Art">
+
   <link rel="stylesheet" href="styles/styles.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+
+  <script src="scripts/jquery-3.7.1.min.js"></script>
+  <script src="scripts/jquery.selectric.min.js"></script>
+  <script src="scripts/jquery.mask.min.js"></script>
+  <script src="scripts/air-datepicker.min.js"></script>
+  <script src="scripts/jquery.validate.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key="></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+
   <script src="scripts/main.min.js"></script>
   <script src="scripts/main.js"></script>
 </head>
@@ -22,8 +53,8 @@
         <use href="../../assets/icons/logo.svg"></use>
       </svg>
       <nav class="page-header__nav">
-        <a href="#" class="page-header__nav-link">Мероприятия</a>
-        <a href="#" class="page-header__nav-link">Блог</a>
+        <a href="/event_main.html" class="page-header__nav-link">Мероприятия</a>
+        <a href="#blog" class="page-header__nav-link">Блог</a>
         <a href="#" class="page-header__nav-link">О нас</a>
         <a href="#" class="page-header__nav-link">Контакты</a>
 
@@ -92,7 +123,7 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <article class="event-card ">
-                <a href="../blocks/event.html" class="event-card__link">
+                <a href="/card.html" class="event-card__link">
                   <picture class="event-card__picture">
                     <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/events/nirvana.webp" />
                     <source media="(max-width: 450px)" srcset="assets/images/events/nirvana.jpg" />
@@ -115,7 +146,7 @@
             </div>
             <div class="swiper-slide">
               <article class="event-card ">
-                <a href="../blocks/event.html" class="event-card__link">
+                <a href="/card.html" class="event-card__link">
                   <picture class="event-card__picture">
                     <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/events/nirvana.webp" />
                     <source media="(max-width: 450px)" srcset="assets/images/events/nirvana.jpg" />
@@ -138,7 +169,7 @@
             </div>
             <div class="swiper-slide">
               <article class="event-card ">
-                <a href="../blocks/event.html" class="event-card__link">
+                <a href="/card.html" class="event-card__link">
                   <picture class="event-card__picture">
                     <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/events/nirvana.webp" />
                     <source media="(max-width: 450px)" srcset="assets/images/events/nirvana.jpg" />
@@ -161,7 +192,7 @@
             </div>
             <div class="swiper-slide">
               <article class="event-card ">
-                <a href="../blocks/event.html" class="event-card__link">
+                <a href="/card.html" class="event-card__link">
                   <picture class="event-card__picture">
                     <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/events/stuff.webp" />
                     <source media="(max-width: 450px)" srcset="assets/images/events/stuff.jpg" />
@@ -184,7 +215,7 @@
             </div>
             <div class="swiper-slide">
               <article class="event-card ">
-                <a href="../blocks/event.html" class="event-card__link">
+                <a href="/card.html" class="event-card__link">
                   <picture class="event-card__picture">
                     <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/events/Sade.webp" />
                     <source media="(max-width: 450px)" srcset="assets/images/events/Sade.jpg" />
@@ -223,186 +254,15 @@
           </footer>
         </div>
 
-        <a href="#" class="upcoming__link link">Смотреть все</a>
+        <a href="/event_main.html" class="upcoming__link link">Смотреть все</a>
       </div>
     </div>
   </section>
 
   <main class="main">
-    <section class="listing events__listing @@class">
-      <h2 class="listing__title section-title">Мероприятия</h2>
 
-      <div class="listing__events-list">
-        <article class="event-card listing__event-card">
-          <a href="../blocks/event.html" class="event-card__link">
-            <picture class="event-card__picture">
-              <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/events/nirvana.webp" />
-              <source media="(max-width: 450px)" srcset="assets/images/events/nirvana.jpg" />
-
-              <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/events/nirvana_tablet.webp" />
-              <source media="(max-width: 1169px)" srcset="assets/images/events/nirvana_tablet.jpg" />
-
-              <source type="image/webp" srcset="assets/images/events/nirvana.webp" />
-
-              <img src="assets/images/events/nirvana.jpg" alt="nirvana" class="event-card__img" />
-            </picture>
-
-            <div class="event-card__content">
-              <h4 class="event-card__title">Собираемся и слушаем альбом Nirvana</h4>
-              <p class="event-card__description">Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.</p>
-              <time datetime="2025-12-07T18:00" class="event-card__time">07.12.2025 | начало 18.00</time>
-            </div>
-          </a>
-        </article>
-        <article class="event-card listing__event-card">
-          <a href="../blocks/event.html" class="event-card__link">
-            <picture class="event-card__picture">
-              <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/events/stuff.webp" />
-              <source media="(max-width: 450px)" srcset="assets/images/events/stuff.jpg" />
-
-              <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/events/stuff_tablet.webp" />
-              <source media="(max-width: 1169px)" srcset="assets/images/events/stuff_tablet.jpg" />
-
-              <source type="image/webp" srcset="assets/images/events/stuff.webp" />
-
-              <img src="assets/images/events/stuff.jpg" alt="stuff" class="event-card__img" />
-            </picture>
-
-            <div class="event-card__content">
-              <h4 class="event-card__title">Есть тема, нужно обсудить с HowStuffWorks</h4>
-              <p class="event-card__description">Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.</p>
-              <time datetime="2025-12-14T18:30" class="event-card__time">14.12.2025 | начало 18.30</time>
-            </div>
-          </a>
-        </article>
-        <article class="event-card listing__event-card">
-          <a href="../blocks/event.html" class="event-card__link">
-            <picture class="event-card__picture">
-              <source media="(max-width: 450px)" type="image/webp" srcset="assets/images/events/Sade.webp" />
-              <source media="(max-width: 450px)" srcset="assets/images/events/Sade.jpg" />
-
-              <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/events/Sade_tablet.webp" />
-              <source media="(max-width: 1169px)" srcset="assets/images/events/Sade_tablet.jpg" />
-
-              <source type="image/webp" srcset="assets/images/events/Sade.webp" />
-
-              <img src="assets/images/events/Sade.jpg" alt="Sade" class="event-card__img" />
-            </picture>
-
-            <div class="event-card__content">
-              <h4 class="event-card__title">Вечер | The Best of Sade</h4>
-              <p class="event-card__description">Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.</p>
-              <time datetime="2024-12-16T20:00" class="event-card__time">16.12.2024 | начало 20.00</time>
-            </div>
-          </a>
-        </article>
-      </div>
-    </section>
-
-    <table class="events__tariffs-table  table">
-      <thead class="table__head">
-        <tr class="table__head-tr">
-          <th class="table__th"></th>
-          <th class="table__th">Тариф «Light»</th>
-          <th class="table__th">Тариф «Promo»</th>
-          <th class="table__th">Тариф «All stars»</th>
-        </tr>
-      </thead>
-      <tbody class="table__body">
-        <tr class="table__tr">
-          <th class="table__body-th">Стоимость за час</th>
-          <td class="table__td">1 000 ₽</td>
-          <td class="table__td">3 000 ₽</td>
-          <td class="table__td">8 000 ₽</td>
-        </tr>
-        <tr class="table__tr">
-          <th class="table__body-th">Ведущий мероприятия</th>
-          <td class="table__td"></td>
-          <td class="table__td">
-            <span class="ok"></span>
-          </td>
-          <td class="table__td">
-            <span class="ok"></span>
-          </td>
-        </tr>
-        <tr class="table__tr">
-          <th class="table__body-th">Фотосъемка</th>
-          <td class="table__td">
-            <span class="ok"></span>
-          </td>
-          <td class="table__td">
-            <span class="ok"></span>
-          </td>
-          <td class="table__td">
-            <span class="ok"></span>
-          </td>
-        </tr>
-        <tr class="table__tr">
-          <th class="table__body-th">Видеосъемка</th>
-          <td class="table__td"></td>
-          <td class="table__td"></td>
-          <td class="table__td">
-            <span class="ok"></span>
-          </td>
-        </tr>
-        <tr class="table__tr">
-          <th class="table__body-th">Организация питания</th>
-          <td class="table__td"></td>
-          <td class="table__td">
-            <span class="ok"></span>
-          </td>
-          <td class="table__td">
-            <span class="ok"></span>
-          </td>
-        </tr>
-        <tr class="table__tr">
-          <th class="table__body-th">Декор</th>
-          <td class="table__td"></td>
-          <td class="table__td"></td>
-          <td class="table__td">
-            <span class="ok"></span>
-          </td>
-        </tr>
-        <tr class="table__tr">
-          <th class="table__body-th">Звуковое сопровождение</th>
-          <td class="table__td"></td>
-          <td class="table__td">
-            <span class="ok"></span>
-          </td>
-          <td class="table__td">
-            <span class="ok"></span>
-          </td>
-        </tr>
-        <tr class="table__tr">
-          <th class="table__body-th">Дополнительное освещение</th>
-          <td class="table__td"></td>
-          <td class="table__td"></td>
-          <td class="table__td">
-            <span class="ok"></span>
-          </td>
-        </tr>
-
-        <tr class="table__tr">
-          <th class="table__body-th">Клининг</th>
-          <td class="table__td"></td>
-          <td class="table__td"></td>
-          <td class="table__td">
-            <span class="ok"></span>
-          </td>
-        </tr>
-      </tbody>
-
-      <tfoot class="table__footer">
-        <tr class="table__footer-tr">
-          <th class="table__footer-th"></th>
-          <th class="table__footer-th">Тариф «Light»</th>
-          <th class="table__footer-th">Тариф «Promo»</th>
-          <th class="table__footer-th">Тариф «All stars»</th>
-        </tr>
-      </tfoot>
-    </table>
     <div class="home">
-      <section class="listing blog-listing home__listing">
+      <section class="listing blog-listing home__listing" id="blog">
         <h2 class="listing__title section-title">БЛОГ</h2>
 
         <div class="listing__article-list">
@@ -487,239 +347,11 @@
         </div>
 
         <div class="listing__view-all">
-          <a href="#" class="listing__view-all-link">Смотреть все</a>
+          <a href="/event_main.html" class="listing__view-all-link">Смотреть все</a>
         </div>
       </section>
     </div>
-    <section class="event-detail">
-      <h1 class="event-detail__title">Вечер | The Best of Sade</h1>
-      <div class="event-photo">
-        <div class="event-photo__text left-block">
-          <svg class="event-photo__svg" style="transform: scale(-1,1);">
-            <use href="../../assets/icons/rectangle.svg"></use>
-          </svg>
-          <span class="event-photo__datetime">16/12/2024</span>
-          <br>
-          <span>КАФЕ «ПТИЧКА»</span>
-          <svg class="event-photo__svg" style="transform: scale(-1,1);">
-            <use href="../../assets/icons/rectangle.svg"></use>
-          </svg>
-        </div>
-        <img src="assets/images/events/Sade.jpg">
-        <div class="event-photo__text">
-          <svg class="event-photo__svg">
-            <use href="../../assets/icons/rectangle.svg"></use>
-          </svg>
-          <span class="event-photo__datetime">20.00</span>
-          <span>НАЧАЛО</span>
-          <br>
-          <span>ЛЕНИНА 10 2 ЭТАЖ</span>
-          <svg class="event-photo__svg">
-            <use href="../../assets/icons/rectangle.svg"></use>
-          </svg>
-        </div>
-      </div>
-      <div class="event-info">
-        <h2 class="event-info__title">Программа мероприятия:</h2>
-        <ul class="event-program">
-          <li class="event-program__item">
-            <span>20.15 — Приветствие гостей</span>
-          </li>
-          <li class="event-program__item">
-            <span>20.30 — Первая подача блюд | Салаты</span>
-          </li>
-          <li class="event-program__item">
-            <span>20.40 — Живой вокал | Композиции 1-3</span>
-          </li>
-          <li class="event-program__item">
-            <span>21.20 — Подача горячих блюд</span>
-          </li>
-          <li class="event-program__item">
-            <span>21.30 — Живой вокал | Композиции 4-7</span>
-          </li>
-          <li class="event-program__item">
-            <span>22.15 — Подача десерта</span>
-          </li>
-          <li class="event-program__item">
-            <span>22.30 — Живой вокал | Композиции 8-9</span>
-          </li>
-          <li class="event-program__item">
-            <span>23.00 — Завершение вечера</span>
-          </li>
-        </ul>
 
-        <div class="event-info__divider"></div>
-
-        <h3 class="event-info__subtitle">The Best Of Sade</h3>
-        <div class="event-description">
-          <p class="event-description__text">Первый альбом-компиляция Sade, выпущенный в 1994 году. Он содержит 9
-            треков, включая самые популярные хиты группы, раритеты и их любимые треки.</p>
-          <p class="event-description__text">Группа продемонстрировала необычайное долголетие и креативность своей
-            творческой карьеры. Она лидировала музыкальных чартах с 1994 по 1995 год, став четырежды платиновой в
-            США и продав более 2 миллионов копий в Европе.</p>
-        </div>
-
-        <ol class="event-tracks">
-          <li class="event-tracks__item">Your Love Is King</li>
-          <li class="event-tracks__item">Hang On To Your Love</li>
-          <li class="event-tracks__item">Smooth Operator</li>
-          <li class="event-tracks__item">Jezebel</li>
-          <li class="event-tracks__item">The Sweetest Taboo</li>
-          <li class="event-tracks__item">Is It A Crime</li>
-          <li class="event-tracks__item">Never As Good As The First Time</li>
-          <li class="event-tracks__item">Love Is Stronger Than Pride</li>
-          <li class="event-tracks__item">Paradise</li>
-        </ol>
-      </div>
-
-      <div class="booking-grid">
-        <div class="booking-grid__column booking-grid__column--left">
-          <div class="booking-tables">
-            <h3 class="booking-tables__title">Забронировать к стол</h3>
-            <div class="booking-tables__list">
-              <label class="check">
-                <input type="checkbox" name="agree" class="check__input" required checked />
-                <span class="check__mark"></span>
-                <span class="check__label check__label--s">
-                  1 Стол
-                </span>
-              </label>
-              <label class="check">
-                <input type="checkbox" name="agree" class="check__input" required checked />
-                <span class="check__mark"></span>
-                <span class="check__label check__label--s">
-                  2 Стол
-                </span>
-              </label>
-              <label class="check">
-                <input type="checkbox" name="agree" class="check__input" required checked />
-                <span class="check__mark"></span>
-                <span class="check__label check__label--s">
-                  3 Стол
-                </span>
-              </label>
-              <label class="check">
-                <input type="checkbox" name="agree" class="check__input" required checked />
-                <span class="check__mark"></span>
-                <span class="check__label check__label--s">
-                  4 Стол
-                </span>
-              </label>
-              <label class="check">
-                <input type="checkbox" name="agree" class="check__input" required checked />
-                <span class="check__mark"></span>
-                <span class="check__label check__label--s">
-                  5 Стол
-                </span>
-              </label>
-              <label class="check">
-                <input type="checkbox" name="agree" class="check__input" required checked />
-                <span class="check__mark"></span>
-                <span class="check__label check__label--s">
-                  6 Стол
-                </span>
-              </label>
-              <label class="check">
-                <input type="checkbox" name="agree" class="check__input" required checked />
-                <span class="check__mark"></span>
-                <span class="check__label check__label--s">
-                  7 Стол
-                </span>
-              </label>
-              <label class="check">
-                <input type="checkbox" name="agree" class="check__input" required checked />
-                <span class="check__mark"></span>
-                <span class="check__label check__label--s">
-                  8 Стол
-                </span>
-              </label>
-              <label class="check">
-                <input type="checkbox" name="agree" class="check__input" required checked />
-                <span class="check__mark"></span>
-                <span class="check__label check__label--s">
-                  9 Стол
-                </span>
-              </label>
-              <label class="check">
-                <input type="checkbox" name="agree" class="check__input" required checked />
-                <span class="check__mark"></span>
-                <span class="check__label check__label--s">
-                  10 Стол
-                </span>
-              </label>
-              <label class="check">
-                <input type="checkbox" name="agree" class="check__input" required checked />
-                <span class="check__mark"></span>
-                <span class="check__label check__label--s">
-                  11 Стол
-                </span>
-              </label>
-            </div>
-          </div>
-
-          <div class="booking-tickets">
-            <h3 class="booking-tickets__title">Ваши пригласительные билеты</h3>
-
-            <table class="booking-tickets__table">
-              <tr class="booking-tickets__row">
-                <td class="booking-tickets__cell">9 шт.</td>
-                <td class="booking-tickets__cell">1 400 ₽</td>
-                <td class="booking-tickets__cell booking-tickets__cell--total">12 600 ₽</td>
-              </tr>
-              <tr class="booking-tickets__row">
-                <td class="booking-tickets__cell">4 шт.</td>
-                <td class="booking-tickets__cell">1 250 ₽</td>
-                <td class="booking-tickets__cell booking-tickets__cell--total">5 000 ₽</td>
-              </tr>
-            </table>
-
-            <div class="booking-tickets__summary">
-              <span class="booking-tickets__summary-label">Сумма</span>
-              <strong class="booking-tickets__summary-value">17 600 ₽</strong>
-            </div>
-
-            <button class="booking-tickets__button">Купить билеты</button>
-          </div>
-        </div>
-
-        <div class="booking-grid__column booking-grid__column--right">
-          <div class="booking-map">
-            <div class="booking-map__scene-label">Сцена</div>
-            <div class="booking-map__container">
-              <svg class="booking-map__svg" width="780" height="399" viewBox="0 0 780 399">
-                <use href="../../assets/icons/map.svg"></use>
-              </svg>
-            </div>
-          </div>
-
-          <div class="booking-info">
-            <div class="booking-info__prices">
-              <h4 class="booking-info__title">Стоимость пригласительного билета</h4>
-              <div class="booking-info__price-row">
-                <span class="booking-info__price">1 400 ₽</span>
-                <span class="booking-info__description">| 1 персона</span>
-              </div>
-              <div class="booking-info__price-row">
-                <span class="booking-info__price">1 250 ₽</span>
-                <span class="booking-info__description">| 1 персона</span>
-              </div>
-            </div>
-
-            <div class="booking-info__notes">
-              <h4 class="booking-info__title">Примечание</h4>
-              <div class="booking-info__note">
-                <div class="booking-info__dot booking-info__dot--available"></div>
-                <span class="booking-info__text">доступные места</span>
-              </div>
-              <div class="booking-info__note">
-                <div class="booking-info__dot booking-info__dot--booked"></div>
-                <span class="booking-info__text">забронировано</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
   <div class="map_container">
     <div class="map_container__map" id="js-contactsMap"></div>
@@ -737,14 +369,18 @@
         <a class="page-footer__content__text-container__text" aria-label="Email">Контакты</a>
       </div>
       <div class="page-footer__content__email-container">
-        <div class="page-footer__content__email-container_text" aria-label="Telegram">Подпишись и будь в курсе происходящего</div>
+        <div class="page-footer__content__email-container_text" aria-label="Telegram">Подпишись и будь в курсе
+          происходящего</div>
         <div class="page-footer__content__email-container__input-container">
-          <input class="page-footer__content__email-container__input-container__input" placeholder="Email" />
-          <button class="page-footer__content__email-container__input-container__button">Подписаться</button>
+          <form action="https://jsonplaceholder.typicode.com/posts" class="page-footer__subscribe-form subscribe-form" id="js-subscribeForm">
+            <input class="page-footer__content__email-container__input-container__input" id="js-subscribeEmail" placeholder="Email" />
+            <button class="page-footer__content__email-container__input-container__button">Подписаться</button>
+          </form>
         </div>
         <div class="page-footer__content__email-container__checkbox-container">
           <input class="page-footer__content__email-container__checkbox-container__checkbox" type="checkbox" />
-          <div class="page-footer__content__email-container__checkbox-container__label">Согласен на обработку персональных данных</div>
+          <div class="page-footer__content__email-container__checkbox-container__label">Согласен на обработку
+            персональных данных</div>
         </div>
       </div>
     </div>
@@ -789,7 +425,7 @@
           <br />и мы подберем площадку
         </h2>
 
-        <form class="pp__form form">
+        <form class="pp__form form" id="js-eventForm">
           <!-- Формат мероприятия -->
           <div class="form__section">
             <div class="form__label">Формат мероприятия:</div>
@@ -821,7 +457,7 @@
           <div class="form__section">
             <label class="field">
               <span class="field__title">Планируемое количество посетителей:</span>
-              <select class="field__select" name="amount">
+              <select class="field__select js-selectric" name="amount">
                 <option value="20">до 20 человек</option>
                 <option value="100">от 20 до 100 человек</option>
                 <option value="500">от 100 до 500 человек</option>
@@ -851,7 +487,7 @@
             <div class="form__col">
               <label class="field">
                 <span class="field__label">Телефон*</span>
-                <input class="field__input" type="tel" placeholder="+7" name="phone" required>
+                <input class="field__input js-mobileMask" type="tel" placeholder="+7" name="phone" required>
               </label>
             </div>
             <div class="form__col">
@@ -863,12 +499,16 @@
           </div>
 
           <!-- Даты -->
-          <div class="form__section">
+          <div class="form__section js-dateField">
             <div class="form__label">Дата проведения:</div>
-            <div class="form__date-row">
-              <input class="field__input field__input--date" type="text" placeholder="ДД" name="day" maxlength="2">
-              <input class="field__input field__input--date" type="text" placeholder="ММ" name="month" maxlength="2">
-              <input class="field__input field__input--date" type="text" placeholder="ГГГГ" name="year" maxlength="4">
+            <div class="field__date">
+              <div class="field__date-inputs">
+                <input class="field__date-input js-dateDay" type="text" placeholder="ДД" readonly />
+                <input class="field__date-input js-dateMonth" type="text" placeholder="ММ" readonly />
+                <input class="field__date-input field__date-input--year js-dateYear" type="text" placeholder="ГГГГ" readonly />
+              </div>
+
+              <input class="field__date-picker js-dateInput" type="text" name="date" readonly required />
             </div>
           </div>
 

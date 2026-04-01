@@ -1,5 +1,5 @@
 <footer class="page-footer">
-    <div class="page-footer__img" >    
+    <div class="page-footer__img">
         <img src="../../assets/images/blog/Footer.png" />
     </div>
     <div class="page-footer__content">
@@ -11,14 +11,19 @@
             <a class="page-footer__content__text-container__text" aria-label="Email">Контакты</a>
         </div>
         <div class="page-footer__content__email-container">
-            <div class="page-footer__content__email-container_text" aria-label="Telegram">Подпишись и будь в курсе происходящего</div>
+            <div class="page-footer__content__email-container_text" aria-label="Telegram">Подпишись и будь в курсе
+                происходящего</div>
             <div class="page-footer__content__email-container__input-container">
-                <input class="page-footer__content__email-container__input-container__input" placeholder="Email" />
-                <button class="page-footer__content__email-container__input-container__button" >Подписаться</button>
+                <form action="https://jsonplaceholder.typicode.com/posts"
+                    class="page-footer__subscribe-form subscribe-form" id="js-subscribeForm">
+                    <input class="page-footer__content__email-container__input-container__input" id="js-subscribeEmail" placeholder="Email" />
+                    <button class="page-footer__content__email-container__input-container__button">Подписаться</button>
+                </form>
             </div>
             <div class="page-footer__content__email-container__checkbox-container">
                 <input class="page-footer__content__email-container__checkbox-container__checkbox" type="checkbox" />
-                <div class="page-footer__content__email-container__checkbox-container__label">Согласен на обработку персональных данных</div>
+                <div class="page-footer__content__email-container__checkbox-container__label">Согласен на обработку
+                    персональных данных</div>
             </div>
         </div>
     </div>

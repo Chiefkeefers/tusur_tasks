@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Lenni Art</title>
+
+  <meta name="description" content="Арт—пространство для людей, горящих сердец и делом">
+  <meta name="keywords" content="Lenni Art, пространство, мероприятия, искусство, творчество">
+  <meta name="author" content="Lenni Art">
+
+  <meta property="og:title" content="Lenni Art">
+  <meta property="og:description" content="Арт пространство для людей, горящих сердцем и делом">
+  <meta property="og:image" content="/assets/images/lenni-art.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lenni-art.ru/">
+  <meta property="og:site_name" content="Lenni Art">
+  <meta property="og:locale" content="ru_RU">
+
+  <link rel="icon" type="image/png" href="assets/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="assets/favicons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png" />
+  <link rel="manifest" href="assets/favicons/site.webmanifest" />
+
+  <meta name="msapplication-TileColor" content="#dedede">
+  <meta name="theme-color" content="#dedede">
+  <meta name="apple-mobile-web-app-title" content="Lenni Art">
+  <meta name="application-name" content="Lenni Art">
+
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+
+  <script src="scripts/jquery-3.7.1.min.js"></script>
+  <script src="scripts/jquery.selectric.min.js"></script>
+  <script src="scripts/jquery.mask.min.js"></script>
+  <script src="scripts/air-datepicker.min.js"></script>
+  <script src="scripts/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+
+  <script src="scripts/main.min.js"></script>
+  <script src="scripts/main.js"></script>
+</head>
+
+<body class="body">
+  <header class="page-header">
+    <div class="page-header__container">
+      <svg class="page-header__logo" viewBox="0 0 200 147" preserveAspectRatio="xMidYMid meet">
+        <use href="../../assets/icons/logo.svg"></use>
+      </svg>
+      <nav class="page-header__nav">
+        <a href="#" class="page-header__nav-link">Мероприятия</a>
+        <a href="#" class="page-header__nav-link">Блог</a>
+        <a href="#" class="page-header__nav-link">О нас</a>
+        <a href="#" class="page-header__nav-link">Контакты</a>
+
+        <div class="page-header__nav-user">
+          <a href="#" class="page-header__nav-user-link">
+            Александр С.
+          </a>
+          <button type="button" class="page-header__nav-logout">
+            <svg class="page-header__nav-logout-icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#door"></use>
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <div class="page-header__right-block">
+        <a href="#" class="page-header__user-btn">
+          Войти
+          <svg class="page-header__user-icon" width="21" height="18">
+            <use xlink:href="assets/icons/symbols.svg#user"></use>
+          </svg>
+        </a>
+        <button type="button" class="page-header__nav-toggle" id="js-navToggle"></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="blog">
+      <section class="listing blog-listing blog__listing">
+        <h2 class="listing__title section-title">БЛОГ</h2>
+
+        <div class="listing__article-list">
+          <article class="article-card listing__article-card">
+            <a href="#" class="article-card__link">
+              <div class="article-card__picture">
+                <picture>
+                  <source srcset="assets/images/blog/theatre.webp" type="image/webp" media="(min-width: 1024px)">
+                  <source srcset="assets/images/blog/theatre_tablet.webp" type="image/webp">
+                  <source srcset="assets/images/blog/theatre.jpg" media="(min-width: 1024px)">
+                  <img src="assets/images/blog/theatre_tablet.jpg" alt="Theatre Photosession" loading="lazy" class="article-card__img">
+                </picture>
+              </div>
+
+              <div class="article-card__content">
+                <time class="article-card__time" datetime="2024-11-26T00:00">26.11.2024</time>
+                <h3 class="article-card__title">Фотосессия в стенах Театра драмы</h3>
+                <p class="article-card__description">Организована фотосессия для поданного бренда. Одежда мы смогли восполнить все показания заказчика и у нас получилось отличная работа. Смотрите как это было</p>
+              </div>
+
+              <div class="article-card__arrow-wrapper">
+                <button type="button" class="article-card__arrow" aria-label="Читать далее">
+                  <svg class="article-card__arrow-icon">
+                    <use xlink:href="assets/icons/symbols.svg#link"></use>
+                  </svg>
+                </button>
+              </div>
+            </a>
+          </article>
+          <article class="article-card listing__article-card">
+            <a href="#" class="article-card__link">
+              <div class="article-card__picture">
+                <picture>
+                  <source srcset="assets/images/blog/vr.webp" type="image/webp" media="(min-width: 1024px)">
+                  <source srcset="assets/images/blog/vr_tablet.webp" type="image/webp">
+                  <source srcset="assets/images/blog/vr.jpg" media="(min-width: 1024px)">
+                  <img src="assets/images/blog/vr_tablet.jpg" alt="VR Exhibition" loading="lazy" class="article-card__img">
+                </picture>
+              </div>
+
+              <div class="article-card__content">
+                <time class="article-card__time" datetime="2024-11-05T00:00">05.11.2024</time>
+                <h3 class="article-card__title">Выставка VR в Томске</h3>
+                <p class="article-card__description">Кофе виртуальной реальности - это другие миры, яркие эмоции, новый опыт… Мы представляем нашим клиентам лучший игровой VR-опыт в Томске.</p>
+              </div>
+
+              <div class="article-card__arrow-wrapper">
+                <button type="button" class="article-card__arrow" aria-label="Читать далее">
+                  <svg class="article-card__arrow-icon">
+                    <use xlink:href="assets/icons/symbols.svg#link"></use>
+                  </svg>
+                </button>
+              </div>
+            </a>
+          </article>
+          <article class="article-card listing__article-card">
+            <a href="#" class="article-card__link">
+              <div class="article-card__picture">
+                <picture>
+                  <source srcset="assets/images/blog/rock.webp" type="image/webp" media="(min-width: 1024px)">
+                  <source srcset="assets/images/blog/rock_tablet.webp" type="image/webp">
+                  <source srcset="assets/images/blog/rock.jpg" media="(min-width: 1024px)">
+                  <img src="assets/images/blog/rock_tablet.jpg" alt="Rock Concert" loading="lazy" class="article-card__img">
+                </picture>
+              </div>
+
+              <div class="article-card__content">
+                <time class="article-card__time" datetime="2024-11-01T00:00">01.11.2024</time>
+                <h3 class="article-card__title">Rocking radio в заброшенном ангаре</h3>
+                <p class="article-card__description">15 электрогенераторов, километры проводов и пару тонн света. Все это для того, чтобы организовать лучшую вечеринку года для ребят из Новосибирска.</p>
+              </div>
+
+              <div class="article-card__arrow-wrapper">
+                <button type="button" class="article-card__arrow" aria-label="Читать далее">
+                  <svg class="article-card__arrow-icon">
+                    <use xlink:href="assets/icons/symbols.svg#link"></use>
+                  </svg>
+                </button>
+              </div>
+            </a>
+          </article>
+        </div>
+
+        <div class="listing__view-all">
+          <a href="#" class="listing__view-all-link">Смотреть все</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer__img">
+      <img src="../../assets/images/blog/Footer.png" />
+    </div>
+    <div class="page-footer__content">
+      <div class="page-footer__content__text-container">
+        <a class="page-footer__content__text-container__text" aria-label="Telegram">Календарь мероприятий</a>
+        <a class="page-footer__content__text-container__text" aria-label="VK">Провести мероприятие</a>
+        <a class="page-footer__content__text-container__text" aria-label="GitHub">Стать арендатором</a>
+        <a class="page-footer__content__text-container__text" aria-label="Email">Наши проекты</a>
+        <a class="page-footer__content__text-container__text" aria-label="Email">Контакты</a>
+      </div>
+      <div class="page-footer__content__email-container">
+        <div class="page-footer__content__email-container_text" aria-label="Telegram">Подпишись и будь в курсе
+          происходящего</div>
+        <div class="page-footer__content__email-container__input-container">
+          <form action="https://jsonplaceholder.typicode.com/posts" class="page-footer__subscribe-form subscribe-form" id="js-subscribeForm">
+            <input class="page-footer__content__email-container__input-container__input" id="js-subscribeEmail" placeholder="Email" />
+            <button class="page-footer__content__email-container__input-container__button">Подписаться</button>
+          </form>
+        </div>
+        <div class="page-footer__content__email-container__checkbox-container">
+          <input class="page-footer__content__email-container__checkbox-container__checkbox" type="checkbox" />
+          <div class="page-footer__content__email-container__checkbox-container__label">Согласен на обработку
+            персональных данных</div>
+        </div>
+      </div>
+    </div>
+    <div class="page-footer__info">
+      <div class="page-footer__info__text-container">
+        <div class="page-footer__info__text-container__text">
+          © Millennials 2025
+        </div>
+        <div class="page-footer__info__text-container__links">
+          <a class="page-footer__info__text-container__links__link">Политика конфиденциальности</a>
+          <a class="page-footer__info__text-container__links__link">Cookies</a>
+        </div>
+      </div>
+      <div class="page-footer__info__button-container">
+        <button class="page-footer__info__button-container__button">
+          1
+        </button>
+        <button class="page-footer__info__button-container__button">
+          2
+        </button>
+      </div>
+      <div class="page-footer__info__author">
+        <div class="page-footer__info__author__text">
+          Создание и продвижение
+        </div>
+        <img class="page-footer__info__author__img" src="../../assets/images/blog/logo.png" />
+      </div>
+    </div>
+  </footer>
+  <div class="pp" id="js-eventPP">
+    <div class="pp__wrapper">
+      <div class="pp__sticky-close">
+        <button class="pp__x-btn x-btn js-ppCloseBtn">
+          <svg class="x-btn__icon" width="30" height="30">
+            <use xlink:href="assets/icons/symbols.svg#x"></use>
+          </svg>
+        </button>
+      </div>
+
+      <div class="pp__container">
+        <h2 class="pp__title">Заполните форму
+          <br />и мы подберем площадку
+        </h2>
+
+        <form class="pp__form form" id="js-eventForm">
+          <!-- Формат мероприятия -->
+          <div class="form__section">
+            <div class="form__label">Формат мероприятия:</div>
+            <div class="radio">
+              <label class="radio__item">
+                <input class="radio__input" type="radio" name="format" value="seminar" checked>
+                <span class="radio__mark"></span>
+                <span class="radio__label">Мастер-класс/семинар</span>
+              </label>
+              <label class="radio__item">
+                <input class="radio__input" type="radio" name="format" value="concert">
+                <span class="radio__mark"></span>
+                <span class="radio__label">Концерт/выступление</span>
+              </label>
+              <label class="radio__item">
+                <input class="radio__input" type="radio" name="format" value="exhibition">
+                <span class="radio__mark"></span>
+                <span class="radio__label">Выставка/показ</span>
+              </label>
+              <label class="radio__item">
+                <input class="radio__input" type="radio" name="format" value="other">
+                <span class="radio__mark"></span>
+                <span class="radio__label">Другое</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Количество гостей -->
+          <div class="form__section">
+            <label class="field">
+              <span class="field__title">Планируемое количество посетителей:</span>
+              <select class="field__select js-selectric" name="amount">
+                <option value="20">до 20 человек</option>
+                <option value="100">от 20 до 100 человек</option>
+                <option value="500">от 100 до 500 человек</option>
+                <option value="1000">более 500 человек</option>
+              </select>
+            </label>
+          </div>
+
+          <!-- Контакты (имя фамилия) -->
+          <div class="form__row">
+            <div class="form__col">
+              <label class="field">
+                <span class="field__label">Имя*</span>
+                <input class="field__input" type="text" placeholder="Имя" name="name" required>
+              </label>
+            </div>
+            <div class="form__col">
+              <label class="field">
+                <span class="field__label">Фамилия*</span>
+                <input class="field__input" type="text" placeholder="Фамилия" name="surname" required>
+              </label>
+            </div>
+          </div>
+
+          <!-- Контакты -->
+          <div class="form__row">
+            <div class="form__col">
+              <label class="field">
+                <span class="field__label">Телефон*</span>
+                <input class="field__input js-mobileMask" type="tel" placeholder="+7" name="phone" required>
+              </label>
+            </div>
+            <div class="form__col">
+              <label class="field">
+                <span class="field__label">Email*</span>
+                <input class="field__input" type="email" placeholder="Email" name="email" required>
+              </label>
+            </div>
+          </div>
+
+          <!-- Даты -->
+          <div class="form__section js-dateField">
+            <div class="form__label">Дата проведения:</div>
+            <div class="field__date">
+              <div class="field__date-inputs">
+                <input class="field__date-input js-dateDay" type="text" placeholder="ДД" readonly />
+                <input class="field__date-input js-dateMonth" type="text" placeholder="ММ" readonly />
+                <input class="field__date-input field__date-input--year js-dateYear" type="text" placeholder="ГГГГ" readonly />
+              </div>
+
+              <input class="field__date-picker js-dateInput" type="text" name="date" readonly required />
+            </div>
+          </div>
+
+          <!-- Пожелания -->
+          <div class="form__section">
+            <label class="field">
+              <span class="field__title">Есть пожелания? Напишите нам:</span>
+              <textarea class="field__textarea" name="message" rows="3"></textarea>
+            </label>
+          </div>
+
+          <!-- Чекбокс -->
+          <div class="form__section">
+            <label class="check">
+              <input type="checkbox" name="agree" class="check__input" required checked />
+              <span class="check__mark"></span>
+              <span class="check__label check__label--s">
+                Я соглашаюсь с пользовательским соглашением и с политикой
+                использования персональных данных
+              </span>
+            </label>
+          </div>
+
+          <!-- Кнопки -->
+          <div class="form__buttons">
+            <button type="submit" class="form__button form__button--submit">Отправить</button>
+            <button type="button" class="form__button form__button--close js-ppCloseBtn" id="closePP">Закрыть</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
